@@ -140,7 +140,9 @@ Location: .worktrees/{task-id}/
 Branch: task/{task-id}
 ```
 
-After commit, use `/task-complete` to merge task → epic → main branch.
+After commit, run `/merge-up` to merge task branch → epic branch. This is
+**mandatory** — a task is not complete until its branch is merged. The merge-up
+also triggers cascade checks (if all siblings are done, the epic auto-merges).
 
 ## Scope Rules
 

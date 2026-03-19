@@ -139,6 +139,55 @@ Use the Task tool with subagent_type to spawn specialists:
 - Include relevant context from this conversation
 - Specify examine vs execute mode
 
+## Subagent Execution Rule (MANDATORY)
+
+**Every task MUST run in its own dedicated subagent.** This is non-negotiable.
+
+### Why
+Subagents enforce workspace isolation via `isolation: worktree`. Each subagent
+gets its own git worktree, preventing cross-task file conflicts and ensuring
+clean, parallel execution. Running multiple tasks in a single agent violates
+isolation guarantees and risks corrupted state.
+
+### Rules
+
+1. **One task = one subagent.** Never batch multiple tasks into a single
+   subagent invocation.
+2. **Workspace isolation is mandatory.** All task subagents MUST use
+   `isolation: worktree` so each operates in its own worktree copy.
+3. **No shared mutable state.** Subagents must not modify files outside their
+   assigned worktree. Cross-task communication happens through beads metadata
+   and `docs/spelunk/`.
+4. **Merge-up before next dependent.** A task's subagent must complete and its
+   work must be merged up (`/merge-up`) before any dependent task's subagent
+   is spawned. Blocked tasks do not get worktrees until their blockers merge.
+
+### Spawning Pattern
+
+```
+Task(
+  subagent_type: "agent-ecosystem:coding",
+  isolation: "worktree",
+  prompt: "/code {task-id}"
+)
+```
+
+**VIOLATION:** Spawning a coding subagent without `isolation: worktree` or
+assigning multiple tasks to one subagent is FORBIDDEN.
+
+### Merge-Up After Task Completion
+
+Every task subagent's lifecycle ends with merge-up:
+
+1. Subagent completes implementation and gets human commit approval
+2. Subagent runs `/merge-up` to merge task branch → epic branch
+3. Worktree is cleaned up
+4. Bead is closed
+5. Orchestrator checks if newly unblocked tasks can now be spawned
+
+A task is NOT complete until its branch is merged to the epic. No orphan
+task branches allowed.
+
 ## Enforced Dependency Chain
 
 ```

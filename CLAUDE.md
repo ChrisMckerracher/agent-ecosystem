@@ -61,6 +61,13 @@ Product / Coding / QA (peer consensus)
 Code Review Agent (gatekeeper)
 ```
 
+### Subagent Execution (Mandatory)
+Every task MUST run in its own dedicated subagent with `isolation: worktree`.
+- **One task = one subagent.** Never batch multiple tasks into one agent.
+- **Workspace isolation is mandatory.** Each subagent gets its own worktree.
+- **Merge-up required.** Each task subagent must `/merge-up` after completion
+  before dependent tasks can be spawned.
+
 ### Agent Modes
 Most agents support two modes:
 - **examine:** Read-only exploration, no changes
