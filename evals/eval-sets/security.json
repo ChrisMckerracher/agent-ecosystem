@@ -1,0 +1,23 @@
+[
+  {"query": "I'm about to merge this auth refactor. Before I do, can you audit it for security issues — OWASP-style checks, token storage, session handling, the usual suspects?", "should_trigger": true},
+  {"query": "we changed how we hash passwords. need a security review on the crypto choices before this ships", "should_trigger": true},
+  {"query": "Run a security audit on the changes in this branch. We're touching authentication and I don't want to be the next breach headline.", "should_trigger": true},
+  {"query": "Check the new payment flow for vulnerabilities — input validation, SSRF, replay attacks, CSRF, anything you'd flag in a real audit.", "should_trigger": true},
+  {"query": "scan the codebase for hardcoded secrets, leaked tokens, anything in .env files that shouldn't be there", "should_trigger": true},
+  {"query": "Security gate: I need a thorough review of the new SSO integration before we expose it to production traffic.", "should_trigger": true},
+  {"query": "audit our JWT verification logic. it was hand-rolled and i'm nervous about it. specifically the signature validation path", "should_trigger": true},
+  {"query": "Look at the diff for any introduced CVEs, dependency confusion risks, or new attack surface. Be thorough.", "should_trigger": true},
+  {"query": "The architect's design proposes a custom encryption layer. Sanity-check the cryptographic choices and threat model before we go further.", "should_trigger": true},
+  {"query": "I'm pushing to a branch that touches login. Pre-push security check please, blocking issues only.", "should_trigger": true},
+
+  {"query": "Fill out the SOC2 audit security questionnaire — there's a Google form with about 80 questions.", "should_trigger": false},
+  {"query": "Help me calculate my social security retirement benefit. I was born in 1962.", "should_trigger": false},
+  {"query": "We need to hire a security engineer. Help me draft the job description.", "should_trigger": false},
+  {"query": "Set up our office security cameras — recommendations for hardware?", "should_trigger": false},
+  {"query": "Explain how TLS works in general terms — for a blog post I'm writing.", "should_trigger": false},
+  {"query": "Run npm audit and show me the report.", "should_trigger": false},
+  {"query": "Bump the version of the openssl dependency. We're a few minor versions behind.", "should_trigger": false},
+  {"query": "What's the difference between authentication and authorization? Background context for a talk.", "should_trigger": false},
+  {"query": "Build a new endpoint POST /login that takes email+password. Just the implementation, no security review yet.", "should_trigger": false},
+  {"query": "Configure our firewall rules to allow the new service on port 8443. Not a code review, just the networking.", "should_trigger": false}
+]

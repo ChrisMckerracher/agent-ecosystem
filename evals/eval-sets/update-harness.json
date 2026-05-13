@@ -1,0 +1,23 @@
+[
+  {"query": "From now on, when I commit, always run the type checker first and abort on errors. Save this as a permanent harness rule.", "should_trigger": true},
+  {"query": "remember this convention: we never use any-typed exports in this project. add it to the standards so future sessions follow it", "should_trigger": true},
+  {"query": "I want to add a coding standard: all new TypeScript modules must have a top-level docstring. Where does this belong in the harness?", "should_trigger": true},
+  {"query": "Update CLAUDE.md to say we always pin npm dependencies to exact versions. (Per project rules, route this correctly — don't dump into CLAUDE.md directly.)", "should_trigger": true},
+  {"query": "From here on, whenever I ask for a code review, also run a security pass automatically. Persist this preference.", "should_trigger": true},
+  {"query": "i want to capture this feedback for the future: don't auto-format markdown tables, they get mangled. save it as a standard", "should_trigger": true},
+  {"query": "Add a new harness convention: all PRs must have a 'Test plan' section. File it under the right axis in docs/standards/.", "should_trigger": true},
+  {"query": "this came up in review — we should prefer integration tests over mocks for the data layer. save it for next session", "should_trigger": true},
+  {"query": "I want to land this feedback in the harness so it sticks: never use git commit --amend on a pushed commit. Route to the right standards file.", "should_trigger": true},
+  {"query": "add a rule to our coding standards: keep functions under 50 lines. find the right standards file or create one", "should_trigger": true},
+
+  {"query": "Update my package.json to bump react to ^18.3.0.", "should_trigger": false},
+  {"query": "Pull the latest changes from the harness racing simulation repo.", "should_trigger": false},
+  {"query": "I love harness racing — any good books about the history of the sport?", "should_trigger": false},
+  {"query": "Update the version field in .claude-plugin/plugin.json from 0.17.0 to 0.18.0.", "should_trigger": false},
+  {"query": "How do I configure the Claude Code harness with environment variables?", "should_trigger": false},
+  {"query": "Run /update-harness to upgrade my plugin to the latest version.", "should_trigger": false},
+  {"query": "Read CLAUDE.md and tell me what the existing conventions are. Don't add anything.", "should_trigger": false},
+  {"query": "Update the README to reflect the new install command.", "should_trigger": false},
+  {"query": "I had an idea for a new feature — let me jot it down somewhere durable.", "should_trigger": false},
+  {"query": "Refactor docs/standards/typescript.md to use ATX headers everywhere instead of setext.", "should_trigger": false}
+]

@@ -1,0 +1,2329 @@
+{
+  "pos_threshold": 0.6,
+  "fp_threshold": 0.1,
+  "runs_per_query": 3,
+  "model": null,
+  "evaluated": 13,
+  "skipped": [],
+  "results": [
+    {
+      "skill": "architect",
+      "description": "Use when starting new features, making design decisions, or analyzing codebase architecture",
+      "elapsed_seconds": 167.7102611064911,
+      "positive_trigger_rate": 0.13333333333333333,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 4,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "we're about to start work on the multi-tenant billing feature. it's pretty cross-cutting and i'm not sure how to structure it. can you help me work through an approach before I dive in?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I need to make a decision: should the API gateway own auth, or should each downstream service handle it? Walk me through the tradeoffs and help me pick one for this codebase.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to add a real-time notification system to our app. Before I write any code, can you help me think through the design \u2014 what services would need to talk to each other, what's the data flow, where would the state live?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Help me draft a design document for the new payment-processing module. I want to capture the requirements, alternatives, and the chosen approach so the team can review before we start.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "could you analyze how this repo is structured right now and tell me what the major architectural seams are? I'm trying to figure out where a new feature should live",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Before we commit to the rewrite, I want to get an architectural review. What does the current system look like, and where are the boundaries we'd need to redraw?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm starting a new feature for event sourcing in our order pipeline. What's the right way to scope this and what design decisions do we need to make up-front?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "kicking off the SSO migration. before any code goes down, i want to do a proper design pass \u2014 what are the integration points, what changes in the data model, what's the rollout strategy",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "we keep getting stuck implementing this feature because we never actually agreed on the shape of it. can we slow down and do the design work properly?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Can you fix the typo in agents/architect.md? It says 'recieve' instead of 'receive'.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me think through whether to introduce a message queue between these services or just call them synchronously. I want a real architecture conversation, not just an opinion.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Show me the existing file structure of this repository. I just want a tree of the directories.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What does this regex actually match? I'm trying to read the code: /^[a-z]+(-[a-z]+)*$/",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I'm an architect by trade, switching from solution architect to software architecture \u2014 can you suggest good books to read?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Search the codebase for any references to the deprecated handleLegacyAuth function so I can clean them up.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Implement the parseConfig function in src/config.ts. The signature should be (input: string) => Config and it should throw on invalid YAML.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Run the test suite and tell me what's failing.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "The architecture diagram in docs/diagrams/system.png is out of date \u2014 can you regenerate it from the current code? Just the rendering, not a redesign.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What architectural decisions were made in the last six months? Just summarize the git log entries that touched docs/plans/architect/.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I want to learn about hexagonal architecture in general. Can you explain the pattern with examples? No specific project context.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "code",
+      "description": "Use when implementing tasks, or understanding code relationships in a codebase",
+      "elapsed_seconds": 107.3860547542572,
+      "positive_trigger_rate": 0.06666666666666667,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 2,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "Implement the rate-limiter middleware described in docs/plans/architect/rate-limit.md. It needs to track requests per API key in Redis and reject with 429 when over the limit. Write the code and the tests.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I need you to actually write this feature now \u2014 I've claimed the bead and the design is approved. The task is to add S3 upload retry logic with exponential backoff. Go.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok now build out the auth callback handler. should accept the OAuth code, exchange it for a token, store it encrypted in the user_credentials table",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Pick up bead claude_stuff-abc and implement it. The acceptance criteria are spelled out in the description.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Help me understand how the order-creation flow works end to end in this codebase. What calls what, and where does the side-effect tree fan out?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to touch the billing module and I need to know what depends on it before I change anything. Map out the relationships for me.",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Code up the migration that adds a soft_deleted_at column to orders, including the backfill script and a rollback path.",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "trace through how a user request gets from the load balancer down to the database and back. i need to understand the call graph for this app",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "translate the gherkin in docs/specs/features/checkout.feature into actual application code \u2014 not the tests, the production code that satisfies the scenarios",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I need to add a webhooks subsystem. The design is in place. Write the publisher, the subscriber registration table, and the retry logic.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What programming languages does this repository use? Just count the file extensions.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you write me a haiku about TypeScript generics?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I install Node.js on macOS?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Explain in general terms what a closure is in JavaScript. I'm preparing for an interview.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Run npm run build and tell me if it passes.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Open a PR against main with whatever I've got staged right now.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Format docs/architecture.md with prettier.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "The CI is red \u2014 investigate the latest failed run and report what broke. Don't fix it yet.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Lint check on the changed files only, please.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "review my pull request against the style guide, look for issues, don't implement anything new",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "decompose",
+      "description": "Use when breaking a feature or design into a merge tree of dependent tasks",
+      "elapsed_seconds": 27.055370807647705,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "I have the design doc for the multi-region failover feature. Now I need to break it down into a merge tree of dependent tasks so multiple agents can work in parallel \u2014 can you help me decompose it?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "the architect just finished the design for our payments rewrite. it's about 6 weeks of work. split it into manageable tasks with the right dependencies so we can fan it out",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Given this spec, create the task tree: tasks should be ~500 lines each, the merge tree should bottom out at the leaves so dependent tasks can be parallelized.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Help me carve the new notification system design into beads issues with proper blocks/blocked-by relationships. We'll have 4 agents working on it.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "now that the spec is locked, what are the discrete pieces of work we need to do, what depends on what, and which can be done in parallel?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to plan out the rollout of the new search service feature. Need a dependency graph of tasks so I know what I can hand off first and what's blocked.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "break this feature into beads. the design covers data model changes, API, UI, and migration tooling. respect the layering when wiring deps.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to seed a merge tree for the entire authentication redesign. Give me the full task breakdown with epic\u2192leaf hierarchy.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "fan out the design into tasks. i want one task per concern, dependencies wired correctly, and an epic at the top",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We agreed on the approach in the design doc. Next step is to turn it into a parallel-executable task graph. Walk me through that.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Decompose this 1000-line task into smaller subtasks \u2014 it's already on the merge tree but too big.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you eigendecompose this matrix for me? It's 3x3.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Break this string into tokens delimited by commas.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Decompose the JSON in input.json into a flat list of key-value pairs.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Functional decomposition exercise for a CS interview \u2014 explain how you'd break a problem into pure functions.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Composting/decomposition rates for organic waste \u2014 any data on this?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Show me the existing task tree. I haven't created anything new, I just want to see what's there.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I want to start a brand-new feature from scratch \u2014 there's no design yet, just an idea.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write the actual code for the first task on the tree. The tree already exists.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Merge my completed work back up to the epic \u2014 the leaf tasks are all done.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "merge-up",
+      "description": "Use when leaf tasks are complete and you need to merge up to the parent level",
+      "elapsed_seconds": 26.3100528717041,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "All four child tasks for the auth-redesign epic are finished and pushed. What's the right way to merge them back up to the epic branch and close them out?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I just finished bead claude_stuff-xy7 on its worktree. Roll it up to the epic, mark it closed, and unblock anything that depended on it.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "leaf task done, tests pass, ready to fold it back into the parent. handle the git merge and the bead status transitions for me",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "The three sub-tasks of the payments rewrite epic are complete. Merge each child back to the epic branch in dependency order.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "okay i'm done with this task. do the whole merge dance \u2014 child to parent, update bead status, rebase the siblings if needed",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Wrap up the completed leaf task and bring it up the merge tree. The parent branch is `epic/notifications`.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "All child beads under epic claude_stuff-bzy are closed. Bring the changes up to the epic branch.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I've got finished worktree branches for the three search-service subtasks. Merge them upstream to the epic and close the beads.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "The bead is in_progress on a feature worktree and the work is done \u2014 propagate it up the tree and mark it complete.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "promote the completed leaf task back to its parent in the merge tree. tests are green, the design has been satisfied",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Merge these two PRs into a single one \u2014 they're for the same feature and reviewing them separately is a pain.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Explain how merge sort works algorithmically.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "There's a merge conflict in src/auth.ts. Resolve it for me.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Merge the contents of two CSV files based on the user_id column.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Squash my last five commits into one before I push.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I rebase my feature branch onto the latest main?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I want to upmerge \u2014 pull main back into my long-lived feature branch.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Just run git merge for me from the current branch into master.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What does 'up-and-to-the-right' mean in startup metrics jargon? My boss keeps saying it.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I've done some work on a single task, but it's not finished yet \u2014 I want to commit a checkpoint, not complete the task.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "product",
+      "description": "Use when validating designs match product goals, or understanding what problem a codebase solves",
+      "elapsed_seconds": 27.661784172058105,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "The architect drafted a design for cross-account transfers. Does this design actually solve the user problem we said we cared about, or have we drifted?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "validate the proposed feature against our product goals. design is in docs/plans/architect/. i want to know if we're building the right thing or just building something",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I just got handed this repo and I have no idea what business problem it's actually solving. Can you figure out what this thing is for and explain the product to me?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What's the elevator pitch for this codebase? I'm presenting it to a new stakeholder and need to explain what we're building and why anyone cares.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we sink three weeks into this, sanity check: does the design serve the actual product strategy, or are we solving a problem we don't have?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Read through this design and tell me what user need it's targeting. I want a product perspective, not an engineering one.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Help me write a product brief for the new collaboration feature. Who's it for, what problem does it solve, why now.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to spec out a feature using Gherkin \u2014 Given/When/Then \u2014 but I need help framing the user intent first. Walk me through the product side.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the proposed roadmap with a product hat on. are we picking the right things, are the success metrics meaningful, what's missing",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Take a step back from the implementation and tell me what value this whole codebase delivers and to whom.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "List every product in our `products` database table.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What's the price of the Pro plan?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I'm shopping for a new laptop \u2014 what products would you recommend?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Set up a product analytics SDK like Amplitude in this repo.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Add a 'product' field to the orders table.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Run the unit tests in src/product/.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Fix the bug where the product detail page shows a stale price after a refresh.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What's the difference between a product manager and a project manager?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I'm a product manager and I want to use Claude Code \u2014 what tools should I install?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Implement product search by keyword in the catalog service.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "qa",
+      "description": "Use when creating tests from specs, or analyzing test coverage in a codebase",
+      "elapsed_seconds": 30.741501331329346,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "Take the Gherkin in docs/specs/features/checkout.feature and generate Playwright tests from it. Background \u2192 beforeEach, scenario outlines parameterized, video recording on retry.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to know how good our test coverage actually is across the app \u2014 not just line coverage, but where the test gaps are by feature.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "the product team just wrote a new spec for the onboarding flow. turn it into e2e tests so we can ratchet up coverage",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We just shipped the payments service. What tests should exist that don't, and what's the risk if we don't add them?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "generate the test scaffolding from this BDD spec. given/when/then maps directly to arrange/act/assert.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "audit our integration test suite. what scenarios are we missing for the order flow?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Map our Playwright tests back to the feature specs in docs/specs/features/ and tell me what's untested.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I have an acceptance criteria list in this bead. Write the test cases that would actually verify each criterion.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "we need coverage analysis before we cut the release. which modules are dangerously under-tested?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "From this Gherkin feature file, produce the corresponding Playwright e2e tests including data fixtures for each scenario outline row.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Run the existing test suite \u2014 just execute it, don't write new tests.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "QA my pull request and check for code smells.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Quality assurance in manufacturing \u2014 explain the difference between QA and QC for an essay I'm writing.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Onboard me to the QA team's processes. Who do I talk to about manual test plans?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Fix the failing test in src/auth.test.ts \u2014 the assertion's wrong.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I configure Playwright to run headless in CI? Just config questions, no test authoring.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Investigate why this flaky test fails about 20% of the time.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write a Gherkin spec for the new password-reset feature. No tests yet, just the spec.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Show me the latest CI test report.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Delete the obsolete tests for the deprecated v1 endpoints.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "rebalance",
+      "description": "Use when tasks are too large (over 500 lines) or too small, to rebalance the merge tree",
+      "elapsed_seconds": 29.49816107749939,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "the merge tree is lopsided \u2014 half the leaves are tiny 50-line trivialities and one is a monster. fix the balance",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I just looked at the task tree and one of the tasks is going to be like 1500 lines. That's way too big. Can we redistribute the work so each task stays around 500 lines?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Split task claude_stuff-bzy into two \u2014 it's clearly two distinct concerns smushed together. Update the merge tree deps accordingly.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We've got a 2000-line bead. That blows past the 1000-line cap. Break it up and rewire the parent/child relationships.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "This decomposition turned out wrong \u2014 task A is doing what task B was supposed to. Reshape the tree.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "look at the current task tree shape \u2014 the leaves are uneven. merge the trivially-small ones and split the giant one",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "The auth-redesign epic has three subtasks but one of them is doing 80% of the work. Redistribute so the agents can parallelize properly.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "i estimated wrong during decompose. some tasks are bigger than expected. can we restructure the merge tree without redoing the whole design?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Make the task tree more even. Combine the no-op tasks, split the heavyweight ones. Same overall scope.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "The leaf tasks aren't sized for one-shot agent runs. Reshape the merge tree so each leaf is closer to the 500-line target.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Rebalance my retirement portfolio \u2014 too much in tech, not enough in bonds.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Rebalance the production load balancer, we're seeing skew across the backend pool.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do you rebalance a red-black tree after an insertion? Just curious about the algorithm.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Rebalance the gain across the audio channels in my mix.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Re-balance is one word or two?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me re-prioritize my todo list \u2014 too much on my plate today.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Break this new feature design into a brand-new task tree. Nothing exists yet.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Decompose the upcoming payments rewrite into a merge tree from scratch.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Show me what's currently on the task tree \u2014 visualize the state, don't change anything.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "The current task is too big for me personally \u2014 can I get a teammate to take half of it? Don't change the tree.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "review",
+      "description": "Use when reviewing code changes for style guide compliance and quality standards",
+      "elapsed_seconds": 30.335284948349,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "review the changes on this branch the same way a strict reviewer would. flag style violations, complexity issues, anything that wouldn't pass at the gate",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Code review request: I just finished implementing the payment retry logic. Please go through it and check for code quality issues, edge cases I missed, and style guide drift.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Be my pre-PR reviewer. Comb through the diff, point out anything sub-par, suggest improvements that maintain the codebase's style.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to open a PR \u2014 can you do a code review pass against our style guide and quality standards first, so I can fix anything obvious before reviewers see it?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "im about to merge but feels like i rushed it. give me a thorough review \u2014 naming, complexity, test coverage, the works",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Review the new code against AGENTS.md and the standards in docs/standards/. Flag anything that doesn't conform.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Check the changes for style guide compliance and quality issues. Don't fix them \u2014 just produce a review with findings.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Treat this like a real PR review. Apply our quality standards and tell me what would block the merge.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "i need a code review before this gets in front of a human reviewer. quality pass, style pass, the usual checks",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Run a code-review pass over the staged changes and produce a structured review with concrete suggestions.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Help me write performance reviews for my team \u2014 I'm a manager and review season is next month.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Review the architecture doc the architect just wrote and tell me if the design is sound.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I want to review the customer feedback in Linear from last quarter. Can you summarize it?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Review my r\u00e9sum\u00e9 and tell me where it's weak. I'm job hunting.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Implement the code review comments my colleague left on the PR \u2014 apply each one.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What is code review, exactly? I'm new to software engineering and want to understand the practice.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Show me past code review comments on this file so I can learn what reviewers care about. Don't review anything new.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Security review the changes \u2014 specifically auth and crypto. Not a general style review.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Lint the code with eslint and report violations. Don't do a manual review.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Approve the PR \u2014 I've already read it and I'm happy.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "security",
+      "description": "Use when auditing code for security vulnerabilities, or before any merge involving auth/crypto",
+      "elapsed_seconds": 29.16441512107849,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "I'm about to merge this auth refactor. Before I do, can you audit it for security issues \u2014 OWASP-style checks, token storage, session handling, the usual suspects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Run a security audit on the changes in this branch. We're touching authentication and I don't want to be the next breach headline.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "we changed how we hash passwords. need a security review on the crypto choices before this ships",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Check the new payment flow for vulnerabilities \u2014 input validation, SSRF, replay attacks, CSRF, anything you'd flag in a real audit.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "scan the codebase for hardcoded secrets, leaked tokens, anything in .env files that shouldn't be there",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Security gate: I need a thorough review of the new SSO integration before we expose it to production traffic.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "audit our JWT verification logic. it was hand-rolled and i'm nervous about it. specifically the signature validation path",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Look at the diff for any introduced CVEs, dependency confusion risks, or new attack surface. Be thorough.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "The architect's design proposes a custom encryption layer. Sanity-check the cryptographic choices and threat model before we go further.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm pushing to a branch that touches login. Pre-push security check please, blocking issues only.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Fill out the SOC2 audit security questionnaire \u2014 there's a Google form with about 80 questions.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me calculate my social security retirement benefit. I was born in 1962.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "We need to hire a security engineer. Help me draft the job description.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Set up our office security cameras \u2014 recommendations for hardware?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Explain how TLS works in general terms \u2014 for a blog post I'm writing.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Run npm audit and show me the report.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Bump the version of the openssl dependency. We're a few minor versions behind.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What's the difference between authentication and authorization? Background context for a talk.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Build a new endpoint POST /login that takes email+password. Just the implementation, no security review yet.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Configure our firewall rules to allow the new service on port 8443. Not a code review, just the networking.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "task-complete",
+      "description": "Use when completing a task - commits work, merges to epic, rebases dependents, and closes the task bead",
+      "elapsed_seconds": 61.350985050201416,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "task is done. handle the whole end-of-task workflow for me \u2014 commit + merge up + rebase dependents + close the bead",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm finished with this task. Wrap it up \u2014 commit, merge to the epic, rebase anything that depended on me, and close the bead.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I've finished bead claude_stuff-bzy. Do all the close-out steps atomically so I don't forget any of them.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "tests pass, code is good, the task is complete. close it out the right way \u2014 beads, git, dependents, everything",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "completed the implementation. now i need the full task-completion flow: commit, merge into epic branch, rebase the tasks that are blocked on this one, mark the bead closed",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm calling this task done. Run the standard finish sequence \u2014 I don't want to do it by hand and miss a step.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "wrap up the current task and unblock the next layer of work in the tree",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Finalize this completed bead. All the post-implementation hygiene \u2014 git, beads, rebases \u2014 please.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I just pushed the last commit for the task. Now do the merge-to-epic, dependent rebase, and bead close in one atomic flow.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok task done. take it from here \u2014 fold it into the epic, sort out the downstream tasks, close the bead",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Complete this sentence: 'The quick brown fox jumps over...'",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I just completed an online course on Kubernetes. What should I learn next?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Mark the bead in_progress \u2014 I'm starting work, not finishing.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I'm partway through the task and want to commit a checkpoint. Don't merge or close anything, just commit.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "All the child tasks are done, but I'm not on a task right now \u2014 I just need to roll the children up to the epic.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Close bead claude_stuff-xyz \u2014 that's it. Don't do any git work, just mark it closed.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "The task is half done and I'm stuck. Help me unblock myself, not finish it.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Run autocomplete on this Python file to fill in the missing implementations.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Mark all my pending todos as done in this Markdown file.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I want to abandon this task \u2014 the requirements changed. How do I cleanly drop it without merging anything?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "update-harness",
+      "description": "Use when you receive feedback that should land in the harness \u2014 routes to the right standards file in docs/standards/ or creates a new one when no existing axis fits",
+      "elapsed_seconds": 29.220035076141357,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "From now on, when I commit, always run the type checker first and abort on errors. Save this as a permanent harness rule.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "remember this convention: we never use any-typed exports in this project. add it to the standards so future sessions follow it",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Update CLAUDE.md to say we always pin npm dependencies to exact versions. (Per project rules, route this correctly \u2014 don't dump into CLAUDE.md directly.)",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to add a coding standard: all new TypeScript modules must have a top-level docstring. Where does this belong in the harness?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "From here on, whenever I ask for a code review, also run a security pass automatically. Persist this preference.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "i want to capture this feedback for the future: don't auto-format markdown tables, they get mangled. save it as a standard",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Add a new harness convention: all PRs must have a 'Test plan' section. File it under the right axis in docs/standards/.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "this came up in review \u2014 we should prefer integration tests over mocks for the data layer. save it for next session",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to land this feedback in the harness so it sticks: never use git commit --amend on a pushed commit. Route to the right standards file.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "add a rule to our coding standards: keep functions under 50 lines. find the right standards file or create one",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Update my package.json to bump react to ^18.3.0.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Pull the latest changes from the harness racing simulation repo.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I love harness racing \u2014 any good books about the history of the sport?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Update the version field in .claude-plugin/plugin.json from 0.17.0 to 0.18.0.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I configure the Claude Code harness with environment variables?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Run /update-harness to upgrade my plugin to the latest version.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Read CLAUDE.md and tell me what the existing conventions are. Don't add anything.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Update the README to reflect the new install command.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I had an idea for a new feature \u2014 let me jot it down somewhere durable.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Refactor docs/standards/typescript.md to use ATX headers everywhere instead of setext.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "verify",
+      "description": "Create and manage verify cycles for project-specific quality checks during code review",
+      "elapsed_seconds": 28.483392000198364,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "create a new verify cycle for this repo \u2014 should hit the python type-check and the integration tests. save it so it runs during /review",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to add a quality gate that has to pass before any merge: run the linter, the tests, and the bundle-size check. Wire it into the review flow.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Set up a project-specific verify cycle that runs `npm test` and `npm run typecheck` before code review can pass. Persist it so it runs automatically every time.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "add a verification step that confirms there are no TODO comments in the diff. should block code review if violated",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We need an automated check during code review: every new module must export a unit-tested public API. Make this a verify cycle.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "i want our review pipeline to automatically verify gherkin specs match playwright tests. set this up as a managed verify cycle",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Configure a verify step that runs the contract tests against the staging API. Triggered by /review.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Add the formatter to the verification pipeline. Code that isn't prettier-clean shouldn't pass review.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Set up a quality check that ensures every changed file has a corresponding test file change. Run it during review.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "list and manage the existing verify cycles for this project \u2014 i want to add one and remove one",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Verify this signature against the public key in the header.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Send me a verification email to confirm my new account.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Verify the data in this CSV is internally consistent \u2014 no nulls in required columns.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I verify a Docker image was built reproducibly?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Verify my code compiles and the tests pass \u2014 just run them, don't set up a permanent gate.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Run the existing tests and show me the results.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Verify that the migration won't lose data when applied to the staging DB.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What does 'verify' mean in a cryptographic-signature context?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Add a CI step in .github/workflows/main.yml that runs the linter. (Not a managed verify cycle, just a raw GH Action.)",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Confirm my hypothesis that the slow endpoint is the report builder. Verify it experimentally.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "skill": "visualize",
+      "description": "Use when you want to see the current task tree, progress, and what's ready to work on",
+      "elapsed_seconds": 26.52465009689331,
+      "positive_trigger_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 0,
+      "positive_runs": 30,
+      "negative_triggers": 0,
+      "negative_runs": 30,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "Show me the current task tree for this project \u2014 what's in flight, what's blocked, what's ready to be picked up.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I just got back from vacation. Catch me up on the state of the work \u2014 task tree, what's done, what's left.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "where are we in the workflow right now? i want a top-down view of the merge tree and progress on each branch",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Visualize the current state of the beads \u2014 what's the shape of the epic and where are we on each leaf.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "give me a picture of the current merge tree, color-coded or whatever, so I can see at a glance what's parallel-able right now",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Render the task tree so I can see the full structure \u2014 epic at the top, leaves at the bottom, dependencies between.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "what's ready to work on next? show the available work in context of the rest of the tree, not just a flat list",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Display the in-progress, blocked, and ready beads in tree form. I want to spot bottlenecks.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "show the whole project's task graph. i want to see which tasks block which and where the critical path is",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Pull up the current visualization of the task tree \u2014 like a quick health check on the workflow.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Visualize this dataset as a bar chart in matplotlib.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What are the best practices for data visualization in general? Reading for a class.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Generate an architecture diagram for this codebase as a PNG.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Show me a flowchart of the user-signup flow.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I want to use D3 to visualize a graph in the browser \u2014 give me a starter implementation.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Plot the response time of our API over the last week.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "List all open beads as a plain table. No tree, no fanciness.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "What does bd ready do, exactly? Just describe the command.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Create a new task and add it to the tree.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Close the bead I'm currently working on.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "passed": 0,
+  "failed": 13,
+  "errored": 0,
+  "_run_status": "rate_limited",
+  "_run_notes": "First full run hit Anthropic API rate limits partway through. Only the first ~2 skills (architect, code) completed enough queries to produce real signal (architect 4/30 pos triggers, code 2/30). Skills evaluated after the rate limit was tripped show ~26-30s elapsed (vs 84-167s for clean runs) and 0/0 triggers \u2014 those rows reflect subprocess aborts, not low trigger rates. Re-run with --num-workers 2 (or after rate limits reset) for canonical numbers."
+}

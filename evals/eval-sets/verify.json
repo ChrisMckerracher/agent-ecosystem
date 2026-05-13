@@ -1,0 +1,23 @@
+[
+  {"query": "Set up a project-specific verify cycle that runs `npm test` and `npm run typecheck` before code review can pass. Persist it so it runs automatically every time.", "should_trigger": true},
+  {"query": "I want to add a quality gate that has to pass before any merge: run the linter, the tests, and the bundle-size check. Wire it into the review flow.", "should_trigger": true},
+  {"query": "create a new verify cycle for this repo — should hit the python type-check and the integration tests. save it so it runs during /review", "should_trigger": true},
+  {"query": "add a verification step that confirms there are no TODO comments in the diff. should block code review if violated", "should_trigger": true},
+  {"query": "We need an automated check during code review: every new module must export a unit-tested public API. Make this a verify cycle.", "should_trigger": true},
+  {"query": "i want our review pipeline to automatically verify gherkin specs match playwright tests. set this up as a managed verify cycle", "should_trigger": true},
+  {"query": "Configure a verify step that runs the contract tests against the staging API. Triggered by /review.", "should_trigger": true},
+  {"query": "Add the formatter to the verification pipeline. Code that isn't prettier-clean shouldn't pass review.", "should_trigger": true},
+  {"query": "Set up a quality check that ensures every changed file has a corresponding test file change. Run it during review.", "should_trigger": true},
+  {"query": "list and manage the existing verify cycles for this project — i want to add one and remove one", "should_trigger": true},
+
+  {"query": "Verify this signature against the public key in the header.", "should_trigger": false},
+  {"query": "Send me a verification email to confirm my new account.", "should_trigger": false},
+  {"query": "Verify the data in this CSV is internally consistent — no nulls in required columns.", "should_trigger": false},
+  {"query": "How do I verify a Docker image was built reproducibly?", "should_trigger": false},
+  {"query": "Verify my code compiles and the tests pass — just run them, don't set up a permanent gate.", "should_trigger": false},
+  {"query": "Run the existing tests and show me the results.", "should_trigger": false},
+  {"query": "Verify that the migration won't lose data when applied to the staging DB.", "should_trigger": false},
+  {"query": "What does 'verify' mean in a cryptographic-signature context?", "should_trigger": false},
+  {"query": "Add a CI step in .github/workflows/main.yml that runs the linter. (Not a managed verify cycle, just a raw GH Action.)", "should_trigger": false},
+  {"query": "Confirm my hypothesis that the slow endpoint is the report builder. Verify it experimentally.", "should_trigger": false}
+]

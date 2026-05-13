@@ -1,0 +1,23 @@
+[
+  {"query": "Take the Gherkin in docs/specs/features/checkout.feature and generate Playwright tests from it. Background → beforeEach, scenario outlines parameterized, video recording on retry.", "should_trigger": true},
+  {"query": "I want to know how good our test coverage actually is across the app — not just line coverage, but where the test gaps are by feature.", "should_trigger": true},
+  {"query": "the product team just wrote a new spec for the onboarding flow. turn it into e2e tests so we can ratchet up coverage", "should_trigger": true},
+  {"query": "We just shipped the payments service. What tests should exist that don't, and what's the risk if we don't add them?", "should_trigger": true},
+  {"query": "generate the test scaffolding from this BDD spec. given/when/then maps directly to arrange/act/assert.", "should_trigger": true},
+  {"query": "audit our integration test suite. what scenarios are we missing for the order flow?", "should_trigger": true},
+  {"query": "Map our Playwright tests back to the feature specs in docs/specs/features/ and tell me what's untested.", "should_trigger": true},
+  {"query": "I have an acceptance criteria list in this bead. Write the test cases that would actually verify each criterion.", "should_trigger": true},
+  {"query": "we need coverage analysis before we cut the release. which modules are dangerously under-tested?", "should_trigger": true},
+  {"query": "From this Gherkin feature file, produce the corresponding Playwright e2e tests including data fixtures for each scenario outline row.", "should_trigger": true},
+
+  {"query": "Run the existing test suite — just execute it, don't write new tests.", "should_trigger": false},
+  {"query": "QA my pull request and check for code smells.", "should_trigger": false},
+  {"query": "Quality assurance in manufacturing — explain the difference between QA and QC for an essay I'm writing.", "should_trigger": false},
+  {"query": "Onboard me to the QA team's processes. Who do I talk to about manual test plans?", "should_trigger": false},
+  {"query": "Fix the failing test in src/auth.test.ts — the assertion's wrong.", "should_trigger": false},
+  {"query": "How do I configure Playwright to run headless in CI? Just config questions, no test authoring.", "should_trigger": false},
+  {"query": "Investigate why this flaky test fails about 20% of the time.", "should_trigger": false},
+  {"query": "Write a Gherkin spec for the new password-reset feature. No tests yet, just the spec.", "should_trigger": false},
+  {"query": "Show me the latest CI test report.", "should_trigger": false},
+  {"query": "Delete the obsolete tests for the deprecated v1 endpoints.", "should_trigger": false}
+]
