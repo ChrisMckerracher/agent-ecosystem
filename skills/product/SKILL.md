@@ -1,6 +1,6 @@
 ---
 name: product
-description: Use when validating designs match product goals, or understanding what problem a codebase solves
+description: Product brief writing, Gherkin feature spec authoring, and design validation against product goals. Used when the user says 'write a spec', 'product brief', 'is this design right for users', 'what problem does this solve', or when starting a new feature with /product spec. Writes to docs/specs/.
 ---
 
 # /product

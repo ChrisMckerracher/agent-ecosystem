@@ -1,6 +1,6 @@
 ---
 name: security
-description: Use when auditing code for security vulnerabilities, or before any merge involving auth/crypto
+description: Security audit for OWASP Top 10, secrets, CVEs, and supply-chain risks. Used when the user says 'security review', 'audit this', 'check for vulnerabilities', before any merge involving auth/crypto/PII, or when /security is invoked. Has VETO power on insecure changes.
 ---
 
 # /security

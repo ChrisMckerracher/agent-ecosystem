@@ -1,6 +1,6 @@
 ---
 name: merge-up
-description: Use when leaf tasks are complete and you need to merge up to the parent level
+description: Merge a completed epic up to its parent (epic→parent-epic or epic→main) with conflict resolution. Used when ALL leaf tasks of an epic are closed and the epic branch is ready to merge upward. Not for individual task completion — /task-complete handles task→epic. Not for implementation — use /code.
 ---
 
 # /merge-up

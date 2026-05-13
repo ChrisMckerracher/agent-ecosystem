@@ -1,6 +1,6 @@
 ---
 name: update-claude
-description: Use when you receive feedback that should update project CLAUDE.md conventions
+description: Update project CLAUDE.md conventions with new rules from user feedback. Used when the user says 'add this to CLAUDE.md', 'remember this convention', 'update our standards', or gives durable feedback about repository conventions. Surgical edits only — preserves existing structure.
 ---
 
 # /update-claude

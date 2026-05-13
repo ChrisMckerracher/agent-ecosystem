@@ -1,6 +1,6 @@
 ---
 name: code
-description: Use when implementing tasks, or understanding code relationships in a codebase
+description: Implement tasks using TDD workflow with full source code access. Used when the user says 'implement X', 'write the code', 'build feature Y', 'fix this bug', or when working on an open beads task. Drives spelunk for codebase context. Not for committing/merging finished work — use /task-complete.
 ---
 
 # /code

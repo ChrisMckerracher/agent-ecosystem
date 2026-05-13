@@ -1,6 +1,6 @@
 ---
 name: decompose
-description: Use when breaking a feature or design into a merge tree of dependent tasks
+description: Break a feature or design doc into a merge tree of dependent tasks (epics + leaf tasks) tracked in beads. Used after architecture design is approved, when the user says 'decompose', 'break into tasks', 'create task tree', or 'plan the work'. Creates worktrees and bead dependencies. Not for design — use /architect.
 ---
 
 # /decompose

@@ -1,6 +1,6 @@
 ---
 name: visualize
-description: Use when you want to see the current task tree, progress, and what's ready to work on
+description: Show the current beads task tree, progress, and what's ready to work on as a Mermaid diagram or ASCII tree. Used when the user says 'visualize', 'show me the task tree', 'what's left', 'what's ready', 'progress', or invokes /visualize. Reads bd ready and bd list.
 ---
 
 # /visualize

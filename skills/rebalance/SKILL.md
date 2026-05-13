@@ -1,6 +1,6 @@
 ---
 name: rebalance
-description: Use when tasks are too large (over 500 lines) or too small, to rebalance the merge tree
+description: Rebalance the beads task merge tree when tasks are too large (>500 lines, max 1000) or too small (<50 lines). Used when the user says 'tasks too big', 'rebalance', 'split this task', 'tasks too granular', or when /code reports scope overflow. Adjusts task tree without losing work.
 ---
 
 # /rebalance

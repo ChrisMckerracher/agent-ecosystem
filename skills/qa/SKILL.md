@@ -1,6 +1,6 @@
 ---
 name: qa
-description: Use when creating tests from specs, or analyzing test coverage in a codebase
+description: Test generation and coverage analysis. Used when the user asks to 'write tests', 'generate tests', 'add e2e tests', mentions Playwright, Gherkin, .feature files, BDD scenarios, or test coverage gaps. Also runs after a Gherkin spec is approved to generate executable Playwright tests. Not for code style review — use /review.
 ---
 
 # /qa

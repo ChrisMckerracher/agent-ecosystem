@@ -1,3 +1,8 @@
+---
+name: spelunk
+description: Targeted codebase exploration with hash-cached structured documentation. Used when an agent needs info about code interfaces, flows, boundaries, contracts, or trust zones. Triggers on 'explore X', 'understand Y module', 'map auth flow', 'what interfaces exist in Z', or when invoked via /code spelunk.
+---
+
 # Spelunk Mode
 
 ## Purpose

@@ -1,6 +1,6 @@
 ---
 name: review
-description: Use when reviewing code changes for style guide compliance and quality standards
+description: Code review for style guide compliance and quality standards before merge. Used when the user says 'review my code', 'review this PR', 'check this diff', or right before committing changes. Not for security audit — use /security. Not for test coverage — use /qa.
 ---
 
 # /review

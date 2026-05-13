@@ -1,6 +1,6 @@
 ---
 name: verify
-description: Create and manage verify cycles for project-specific quality checks during code review
+description: Verify cycles for project-specific quality checks (lint, type-check, tests, build) during code review. Used when the user says 'set up verify', 'run quality checks', 'add a verify cycle', or when creating quality gates for the review process. Not for one-off reviews — use /review.
 ---
 
 # /verify

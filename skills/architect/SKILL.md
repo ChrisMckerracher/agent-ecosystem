@@ -1,6 +1,6 @@
 ---
 name: architect
-description: Use when starting new features, making design decisions, or analyzing codebase architecture
+description: Architecture design and codebase analysis. Used when starting new features, making ADR-level decisions, designing systems, or when the user says 'design X', 'plan implementation', 'analyze architecture', 'how is Y structured'. Writes design docs to docs/plans/architect/. Not for task breakdown — use /decompose.
 ---
 
 # /architect

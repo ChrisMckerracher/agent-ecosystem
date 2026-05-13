@@ -1,6 +1,6 @@
 ---
 name: task-complete
-description: Use when completing a task - commits work, merges to epic, rebases dependents, and closes the task bead
+description: Complete a leaf task: commit work, merge task→epic, rebase dependent tasks, and close the beads issue. Used when the user says 'finish this task', 'task done', 'wrap up', 'close this task', or when leaf-task implementation is verified. Not for upward epic→main merges — use /merge-up. Not for implementing — use /code.
 ---
 
 # /task-complete
