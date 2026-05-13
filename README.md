@@ -26,7 +26,7 @@
 ## Quick Start
 
 ```bash
-/plugin marketplace add https://github.com/ChrisMckerracher/claude_stuff
+/plugin marketplace add https://github.com/ChrisMckerracher/agent-ecosystem
 /plugin install agent-ecosystem
 ```
 

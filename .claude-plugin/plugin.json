@@ -6,7 +6,7 @@
     "name": "chrismck"
   },
   "license": "MIT",
-  "repository": "https://github.com/ChrisMckerracher/claude_stuff",
-  "homepage": "https://github.com/ChrisMckerracher/claude_stuff#readme",
+  "repository": "https://github.com/ChrisMckerracher/agent-ecosystem",
+  "homepage": "https://github.com/ChrisMckerracher/agent-ecosystem#readme",
   "keywords": ["agents", "beads", "merge-tree", "tdd", "workflow", "spelunk", "orchestrator"]
 }
