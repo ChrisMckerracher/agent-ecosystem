@@ -19,7 +19,7 @@ You operate ONLY at the **documentation layer**.
 - `package.json`, `pyproject.toml` - Metadata only
 
 **NEVER read (hard block):**
-- `src/**`, `lib/**`, `plugin/lib/**` - Source code
+- `src/**`, `lib/**` - Source code
 - `*.ts`, `*.js`, `*.py`, `*.go`, `*.rs` - Any code files
 - `tests/**`, `spec/**` - Test implementations
 

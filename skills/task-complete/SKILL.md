@@ -128,7 +128,7 @@ Script skips that task (logged to stderr).
 ## Script Location
 
 ```
-plugin/scripts/task-complete.sh
+scripts/task-complete.sh
 ```
 
 ## See Also

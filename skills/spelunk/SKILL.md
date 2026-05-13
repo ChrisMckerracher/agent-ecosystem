@@ -130,7 +130,7 @@ When LSP is available (Claude Code 2.0.74+), follow this two-phase workflow:
 ### Phase 1: Plan and Execute documentSymbol
 
 ```typescript
-import { planSpelunk, extractSymbolsForPhase2 } from 'plugin/lib/spelunk';
+import { planSpelunk, extractSymbolsForPhase2 } from 'lib/spelunk';
 
 // 1. Get the plan
 const plan = await planSpelunk('interfaces', 'authentication layer', {
@@ -156,8 +156,8 @@ for (const toolCall of plan.toolCalls) {
 ### Phase 2: Extract Symbols and Get References/Hover (Optional)
 
 ```typescript
-import { planReferencesPhase, extractSymbolsForPhase2 } from 'plugin/lib/spelunk';
-import { getLens } from 'plugin/lib/spelunk';
+import { planReferencesPhase, extractSymbolsForPhase2 } from 'lib/spelunk';
+import { getLens } from 'lib/spelunk';
 
 // 1. Extract symbols from phase 1 results
 const lensSpec = getLens('interfaces');
@@ -181,7 +181,7 @@ for (const toolCall of phase2Calls) {
 ### Phase 3: Process Results
 
 ```typescript
-import { processLspResults } from 'plugin/lib/spelunk';
+import { processLspResults } from 'lib/spelunk';
 
 // Process LSP results through lens filtering
 const output = await processLspResults(plan, results, {
@@ -232,7 +232,7 @@ Maps trust boundaries and auth checks.
 The orchestrator can be called directly from TypeScript:
 
 ```typescript
-import { spelunk, SpelunkResult } from 'plugin/lib/spelunk';
+import { spelunk, SpelunkResult } from 'lib/spelunk';
 
 // Full exploration
 const result: SpelunkResult = await spelunk('--for=architect --focus="auth"');

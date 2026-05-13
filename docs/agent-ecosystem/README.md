@@ -249,7 +249,7 @@ Features decompose into dependent tasks forming a tree:
 ## Plugin Structure
 
 ```
-plugin/                              # <- Plugin root
+agent-ecosystem/                     # <- Repo root IS the plugin root
 ├── .claude-plugin/
 │   └── plugin.json                  # Plugin metadata and hooks
 ├── agents/                          # Agent system prompts

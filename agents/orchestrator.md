@@ -55,7 +55,7 @@ When routing to Architecture Agent, use explicit subcommands to trigger proper w
 | Codebase architecture analysis, "understand structure", "module boundaries" | `/architect examine --focus='<area>'` |
 | Break design into tasks, "decompose", "task tree" | `/architect decompose` |
 
-See [`plugin/skills/architect/SKILL.md`](../skills/architect/SKILL.md) for full workflow details.
+See [`skills/architect/SKILL.md`](../skills/architect/SKILL.md) for full workflow details.
 
 **Example:**
 ```
@@ -85,7 +85,7 @@ When routing to QA Agent directly, use explicit subcommands:
 | Generate tests for design/task | `/qa` or `/qa <spec-path>` |
 | Analyze test coverage, "what tests exist", "coverage gaps" | `/qa examine --focus='<area>'` |
 
-See [`plugin/skills/qa/SKILL.md`](../skills/qa/SKILL.md) for full workflow details.
+See [`skills/qa/SKILL.md`](../skills/qa/SKILL.md) for full workflow details.
 
 **Example:**
 ```
@@ -111,7 +111,7 @@ When routing to Product Agent, use explicit subcommands to trigger proper workfl
 | Validate architect design | `/product validate` |
 | Draft PRD or requirements | `/product brief` |
 
-See [`plugin/skills/product/SKILL.md`](../skills/product/SKILL.md) for full workflow details.
+See [`skills/product/SKILL.md`](../skills/product/SKILL.md) for full workflow details.
 
 **Example:**
 ```

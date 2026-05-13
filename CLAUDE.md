@@ -18,8 +18,8 @@ Agent Ecosystem is a Claude Code plugin providing 7 specialized AI agents for so
 ./scripts/test-ecosystem.sh
 
 # Dashboard (TypeScript)
-cd plugin/dashboard && npm install && npm run build
-cd plugin/lib && npm install && npm run build
+cd dashboard && npm install && npm run build
+cd lib && npm install && npm run build
 
 # Verify beads installation
 bd --version
@@ -34,13 +34,13 @@ bd ready  # Show available tasks
 - Code blocks with language hints
 - Keep lines under 100 characters where practical
 
-### TypeScript (plugin/lib/, plugin/dashboard/)
+### TypeScript (lib/, dashboard/)
 - ES modules with `.ts` extension
 - Explicit type annotations for function parameters and returns
 - Use interfaces over type aliases for object shapes
 - Tests use `.test.ts` suffix
 
-### Shell Scripts (scripts/, plugin/hooks/)
+### Shell Scripts (scripts/, hooks/)
 - Bash with `#!/bin/bash` shebang
 - Use `set -e` for fail-fast behavior
 - Quote variables: `"$VAR"` not `$VAR`
@@ -101,12 +101,12 @@ Fallback chain: LSP -> AST (ast-grep/semgrep) -> Grep
 
 | Path | Purpose |
 |------|---------|
-| `plugin/.claude-plugin/plugin.json` | Plugin manifest |
-| `plugin/agents/*.md` | Agent system prompts |
-| `plugin/skills/*/SKILL.md` | Skill definitions |
-| `plugin/commands/*.md` | Slash command definitions |
-| `plugin/hooks/` | Git and session hooks |
-| `plugin/lib/spelunk/` | Spelunk TypeScript implementation |
+| `.claude-plugin/plugin.json` | Plugin manifest |
+| `agents/*.md` | Agent system prompts |
+| `skills/*/SKILL.md` | Skill definitions |
+| `commands/*.md` | Slash command definitions |
+| `hooks/` | Git and session hooks |
+| `lib/spelunk/` | Spelunk TypeScript implementation |
 | `docs/plans/architect/` | Architecture design documents |
 | `docs/spelunk/` | Generated codebase exploration docs |
 | `docs/spelunk/_staleness.json` | Hash validation for spelunk docs |
@@ -198,10 +198,10 @@ Gherkin specs → Playwright tests flow:
 
 ## Plugin Development Notes
 
-- Plugin root is `plugin/` directory
-- Commands in `plugin/commands/` are exposed as `/command-name`
-- Skills in `plugin/skills/*/SKILL.md` are invocable
-- Hooks registered in `plugin/hooks/hooks.json`
+- Plugin root is the repository root
+- Commands in `commands/` are exposed as `/command-name`
+- Skills in `skills/*/SKILL.md` are invocable
+- Hooks registered in `hooks/hooks.json`
 - Test changes with `./scripts/test-ecosystem.sh`
 
 
