@@ -1,0 +1,23 @@
+[
+  {"query": "I have the design doc for the multi-region failover feature. Now I need to break it down into a merge tree of dependent tasks so multiple agents can work in parallel — can you help me decompose it?", "should_trigger": true},
+  {"query": "the architect just finished the design for our payments rewrite. it's about 6 weeks of work. split it into manageable tasks with the right dependencies so we can fan it out", "should_trigger": true},
+  {"query": "Given this spec, create the task tree: tasks should be ~500 lines each, the merge tree should bottom out at the leaves so dependent tasks can be parallelized.", "should_trigger": true},
+  {"query": "Help me carve the new notification system design into beads issues with proper blocks/blocked-by relationships. We'll have 4 agents working on it.", "should_trigger": true},
+  {"query": "I want to plan out the rollout of the new search service feature. Need a dependency graph of tasks so I know what I can hand off first and what's blocked.", "should_trigger": true},
+  {"query": "now that the spec is locked, what are the discrete pieces of work we need to do, what depends on what, and which can be done in parallel?", "should_trigger": true},
+  {"query": "break this feature into beads. the design covers data model changes, API, UI, and migration tooling. respect the layering when wiring deps.", "should_trigger": true},
+  {"query": "I want to seed a merge tree for the entire authentication redesign. Give me the full task breakdown with epic→leaf hierarchy.", "should_trigger": true},
+  {"query": "We agreed on the approach in the design doc. Next step is to turn it into a parallel-executable task graph. Walk me through that.", "should_trigger": true},
+  {"query": "fan out the design into tasks. i want one task per concern, dependencies wired correctly, and an epic at the top", "should_trigger": true},
+
+  {"query": "Decompose this 1000-line task into smaller subtasks — it's already on the merge tree but too big.", "should_trigger": false},
+  {"query": "Can you eigendecompose this matrix for me? It's 3x3.", "should_trigger": false},
+  {"query": "Break this string into tokens delimited by commas.", "should_trigger": false},
+  {"query": "Decompose the JSON in input.json into a flat list of key-value pairs.", "should_trigger": false},
+  {"query": "Functional decomposition exercise for a CS interview — explain how you'd break a problem into pure functions.", "should_trigger": false},
+  {"query": "Composting/decomposition rates for organic waste — any data on this?", "should_trigger": false},
+  {"query": "Show me the existing task tree. I haven't created anything new, I just want to see what's there.", "should_trigger": false},
+  {"query": "I want to start a brand-new feature from scratch — there's no design yet, just an idea.", "should_trigger": false},
+  {"query": "Help me write the actual code for the first task on the tree. The tree already exists.", "should_trigger": false},
+  {"query": "Merge my completed work back up to the epic — the leaf tasks are all done.", "should_trigger": false}
+]

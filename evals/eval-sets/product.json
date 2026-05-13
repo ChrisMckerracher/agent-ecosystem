@@ -1,0 +1,23 @@
+[
+  {"query": "I just got handed this repo and I have no idea what business problem it's actually solving. Can you figure out what this thing is for and explain the product to me?", "should_trigger": true},
+  {"query": "The architect drafted a design for cross-account transfers. Does this design actually solve the user problem we said we cared about, or have we drifted?", "should_trigger": true},
+  {"query": "validate the proposed feature against our product goals. design is in docs/plans/architect/. i want to know if we're building the right thing or just building something", "should_trigger": true},
+  {"query": "What's the elevator pitch for this codebase? I'm presenting it to a new stakeholder and need to explain what we're building and why anyone cares.", "should_trigger": true},
+  {"query": "before we sink three weeks into this, sanity check: does the design serve the actual product strategy, or are we solving a problem we don't have?", "should_trigger": true},
+  {"query": "Help me write a product brief for the new collaboration feature. Who's it for, what problem does it solve, why now.", "should_trigger": true},
+  {"query": "Read through this design and tell me what user need it's targeting. I want a product perspective, not an engineering one.", "should_trigger": true},
+  {"query": "I want to spec out a feature using Gherkin — Given/When/Then — but I need help framing the user intent first. Walk me through the product side.", "should_trigger": true},
+  {"query": "review the proposed roadmap with a product hat on. are we picking the right things, are the success metrics meaningful, what's missing", "should_trigger": true},
+  {"query": "Take a step back from the implementation and tell me what value this whole codebase delivers and to whom.", "should_trigger": true},
+
+  {"query": "List every product in our `products` database table.", "should_trigger": false},
+  {"query": "What's the price of the Pro plan?", "should_trigger": false},
+  {"query": "I'm shopping for a new laptop — what products would you recommend?", "should_trigger": false},
+  {"query": "Set up a product analytics SDK like Amplitude in this repo.", "should_trigger": false},
+  {"query": "Add a 'product' field to the orders table.", "should_trigger": false},
+  {"query": "Run the unit tests in src/product/.", "should_trigger": false},
+  {"query": "Fix the bug where the product detail page shows a stale price after a refresh.", "should_trigger": false},
+  {"query": "What's the difference between a product manager and a project manager?", "should_trigger": false},
+  {"query": "I'm a product manager and I want to use Claude Code — what tools should I install?", "should_trigger": false},
+  {"query": "Implement product search by keyword in the catalog service.", "should_trigger": false}
+]

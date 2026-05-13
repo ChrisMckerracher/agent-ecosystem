@@ -1,0 +1,23 @@
+[
+  {"query": "I'm finished with this task. Wrap it up — commit, merge to the epic, rebase anything that depended on me, and close the bead.", "should_trigger": true},
+  {"query": "task is done. handle the whole end-of-task workflow for me — commit + merge up + rebase dependents + close the bead", "should_trigger": true},
+  {"query": "I've finished bead claude_stuff-bzy. Do all the close-out steps atomically so I don't forget any of them.", "should_trigger": true},
+  {"query": "tests pass, code is good, the task is complete. close it out the right way — beads, git, dependents, everything", "should_trigger": true},
+  {"query": "completed the implementation. now i need the full task-completion flow: commit, merge into epic branch, rebase the tasks that are blocked on this one, mark the bead closed", "should_trigger": true},
+  {"query": "I'm calling this task done. Run the standard finish sequence — I don't want to do it by hand and miss a step.", "should_trigger": true},
+  {"query": "wrap up the current task and unblock the next layer of work in the tree", "should_trigger": true},
+  {"query": "Finalize this completed bead. All the post-implementation hygiene — git, beads, rebases — please.", "should_trigger": true},
+  {"query": "I just pushed the last commit for the task. Now do the merge-to-epic, dependent rebase, and bead close in one atomic flow.", "should_trigger": true},
+  {"query": "ok task done. take it from here — fold it into the epic, sort out the downstream tasks, close the bead", "should_trigger": true},
+
+  {"query": "Complete this sentence: 'The quick brown fox jumps over...'", "should_trigger": false},
+  {"query": "I just completed an online course on Kubernetes. What should I learn next?", "should_trigger": false},
+  {"query": "Mark the bead in_progress — I'm starting work, not finishing.", "should_trigger": false},
+  {"query": "I'm partway through the task and want to commit a checkpoint. Don't merge or close anything, just commit.", "should_trigger": false},
+  {"query": "All the child tasks are done, but I'm not on a task right now — I just need to roll the children up to the epic.", "should_trigger": false},
+  {"query": "Close bead claude_stuff-xyz — that's it. Don't do any git work, just mark it closed.", "should_trigger": false},
+  {"query": "The task is half done and I'm stuck. Help me unblock myself, not finish it.", "should_trigger": false},
+  {"query": "Run autocomplete on this Python file to fill in the missing implementations.", "should_trigger": false},
+  {"query": "Mark all my pending todos as done in this Markdown file.", "should_trigger": false},
+  {"query": "I want to abandon this task — the requirements changed. How do I cleanly drop it without merging anything?", "should_trigger": false}
+]

@@ -1,0 +1,23 @@
+[
+  {"query": "Implement the rate-limiter middleware described in docs/plans/architect/rate-limit.md. It needs to track requests per API key in Redis and reject with 429 when over the limit. Write the code and the tests.", "should_trigger": true},
+  {"query": "I need you to actually write this feature now — I've claimed the bead and the design is approved. The task is to add S3 upload retry logic with exponential backoff. Go.", "should_trigger": true},
+  {"query": "ok now build out the auth callback handler. should accept the OAuth code, exchange it for a token, store it encrypted in the user_credentials table", "should_trigger": true},
+  {"query": "Pick up bead claude_stuff-abc and implement it. The acceptance criteria are spelled out in the description.", "should_trigger": true},
+  {"query": "Help me understand how the order-creation flow works end to end in this codebase. What calls what, and where does the side-effect tree fan out?", "should_trigger": true},
+  {"query": "I'm about to touch the billing module and I need to know what depends on it before I change anything. Map out the relationships for me.", "should_trigger": true},
+  {"query": "Code up the migration that adds a soft_deleted_at column to orders, including the backfill script and a rollback path.", "should_trigger": true},
+  {"query": "translate the gherkin in docs/specs/features/checkout.feature into actual application code — not the tests, the production code that satisfies the scenarios", "should_trigger": true},
+  {"query": "trace through how a user request gets from the load balancer down to the database and back. i need to understand the call graph for this app", "should_trigger": true},
+  {"query": "I need to add a webhooks subsystem. The design is in place. Write the publisher, the subscriber registration table, and the retry logic.", "should_trigger": true},
+
+  {"query": "What programming languages does this repository use? Just count the file extensions.", "should_trigger": false},
+  {"query": "Can you write me a haiku about TypeScript generics?", "should_trigger": false},
+  {"query": "How do I install Node.js on macOS?", "should_trigger": false},
+  {"query": "Explain in general terms what a closure is in JavaScript. I'm preparing for an interview.", "should_trigger": false},
+  {"query": "Run npm run build and tell me if it passes.", "should_trigger": false},
+  {"query": "Open a PR against main with whatever I've got staged right now.", "should_trigger": false},
+  {"query": "Format docs/architecture.md with prettier.", "should_trigger": false},
+  {"query": "The CI is red — investigate the latest failed run and report what broke. Don't fix it yet.", "should_trigger": false},
+  {"query": "Lint check on the changed files only, please.", "should_trigger": false},
+  {"query": "review my pull request against the style guide, look for issues, don't implement anything new", "should_trigger": false}
+]

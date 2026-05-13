@@ -1,0 +1,191 @@
+{
+  "pos_threshold": 0.6,
+  "fp_threshold": 0.1,
+  "runs_per_query": 1,
+  "model": null,
+  "evaluated": 1,
+  "skipped": [],
+  "results": [
+    {
+      "skill": "visualize",
+      "description": "Use when you want to see the current task tree, progress, and what's ready to work on",
+      "elapsed_seconds": 84.24313592910767,
+      "positive_trigger_rate": 0.4,
+      "false_positive_rate": 0.0,
+      "positive_triggers": 4,
+      "positive_runs": 10,
+      "negative_triggers": 0,
+      "negative_runs": 10,
+      "pos_threshold": 0.6,
+      "fp_threshold": 0.1,
+      "pass_positive": false,
+      "pass_false_positive": true,
+      "pass": false,
+      "per_query": [
+        {
+          "query": "Render the task tree so I can see the full structure \u2014 epic at the top, leaves at the bottom, dependencies between.",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 1,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "where are we in the workflow right now? i want a top-down view of the merge tree and progress on each branch",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 1,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "Pull up the current visualization of the task tree \u2014 like a quick health check on the workflow.",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 1,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "give me a picture of the current merge tree, color-coded or whatever, so I can see at a glance what's parallel-able right now",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 1,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "Visualize this dataset as a bar chart in matplotlib.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "What are the best practices for data visualization in general? Reading for a class.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "Show me a flowchart of the user-signup flow.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "Show me the current task tree for this project \u2014 what's in flight, what's blocked, what's ready to be picked up.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": false
+        },
+        {
+          "query": "What does bd ready do, exactly? Just describe the command.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "Plot the response time of our API over the last week.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "List all open beads as a plain table. No tree, no fanciness.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "Display the in-progress, blocked, and ready beads in tree form. I want to spot bottlenecks.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": false
+        },
+        {
+          "query": "I just got back from vacation. Catch me up on the state of the work \u2014 task tree, what's done, what's left.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": false
+        },
+        {
+          "query": "Visualize the current state of the beads \u2014 what's the shape of the epic and where are we on each leaf.",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": false
+        },
+        {
+          "query": "what's ready to work on next? show the available work in context of the rest of the tree, not just a flat list",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": false
+        },
+        {
+          "query": "show the whole project's task graph. i want to see which tasks block which and where the critical path is",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": false
+        },
+        {
+          "query": "Generate an architecture diagram for this codebase as a PNG.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "I want to use D3 to visualize a graph in the browser \u2014 give me a starter implementation.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "Close the bead I'm currently working on.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        },
+        {
+          "query": "Create a new task and add it to the tree.",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 1,
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "passed": 0,
+  "failed": 1,
+  "errored": 0
+}

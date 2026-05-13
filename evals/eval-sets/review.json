@@ -1,0 +1,23 @@
+[
+  {"query": "I'm about to open a PR — can you do a code review pass against our style guide and quality standards first, so I can fix anything obvious before reviewers see it?", "should_trigger": true},
+  {"query": "review the changes on this branch the same way a strict reviewer would. flag style violations, complexity issues, anything that wouldn't pass at the gate", "should_trigger": true},
+  {"query": "Code review request: I just finished implementing the payment retry logic. Please go through it and check for code quality issues, edge cases I missed, and style guide drift.", "should_trigger": true},
+  {"query": "Be my pre-PR reviewer. Comb through the diff, point out anything sub-par, suggest improvements that maintain the codebase's style.", "should_trigger": true},
+  {"query": "im about to merge but feels like i rushed it. give me a thorough review — naming, complexity, test coverage, the works", "should_trigger": true},
+  {"query": "Review the new code against AGENTS.md and the standards in docs/standards/. Flag anything that doesn't conform.", "should_trigger": true},
+  {"query": "Check the changes for style guide compliance and quality issues. Don't fix them — just produce a review with findings.", "should_trigger": true},
+  {"query": "Treat this like a real PR review. Apply our quality standards and tell me what would block the merge.", "should_trigger": true},
+  {"query": "i need a code review before this gets in front of a human reviewer. quality pass, style pass, the usual checks", "should_trigger": true},
+  {"query": "Run a code-review pass over the staged changes and produce a structured review with concrete suggestions.", "should_trigger": true},
+
+  {"query": "Help me write performance reviews for my team — I'm a manager and review season is next month.", "should_trigger": false},
+  {"query": "Review the architecture doc the architect just wrote and tell me if the design is sound.", "should_trigger": false},
+  {"query": "I want to review the customer feedback in Linear from last quarter. Can you summarize it?", "should_trigger": false},
+  {"query": "Review my résumé and tell me where it's weak. I'm job hunting.", "should_trigger": false},
+  {"query": "Implement the code review comments my colleague left on the PR — apply each one.", "should_trigger": false},
+  {"query": "What is code review, exactly? I'm new to software engineering and want to understand the practice.", "should_trigger": false},
+  {"query": "Show me past code review comments on this file so I can learn what reviewers care about. Don't review anything new.", "should_trigger": false},
+  {"query": "Security review the changes — specifically auth and crypto. Not a general style review.", "should_trigger": false},
+  {"query": "Lint the code with eslint and report violations. Don't do a manual review.", "should_trigger": false},
+  {"query": "Approve the PR — I've already read it and I'm happy.", "should_trigger": false}
+]

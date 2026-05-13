@@ -1,0 +1,23 @@
+[
+  {"query": "All four child tasks for the auth-redesign epic are finished and pushed. What's the right way to merge them back up to the epic branch and close them out?", "should_trigger": true},
+  {"query": "leaf task done, tests pass, ready to fold it back into the parent. handle the git merge and the bead status transitions for me", "should_trigger": true},
+  {"query": "I just finished bead claude_stuff-xy7 on its worktree. Roll it up to the epic, mark it closed, and unblock anything that depended on it.", "should_trigger": true},
+  {"query": "The three sub-tasks of the payments rewrite epic are complete. Merge each child back to the epic branch in dependency order.", "should_trigger": true},
+  {"query": "okay i'm done with this task. do the whole merge dance — child to parent, update bead status, rebase the siblings if needed", "should_trigger": true},
+  {"query": "Wrap up the completed leaf task and bring it up the merge tree. The parent branch is `epic/notifications`.", "should_trigger": true},
+  {"query": "All child beads under epic claude_stuff-bzy are closed. Bring the changes up to the epic branch.", "should_trigger": true},
+  {"query": "I've got finished worktree branches for the three search-service subtasks. Merge them upstream to the epic and close the beads.", "should_trigger": true},
+  {"query": "promote the completed leaf task back to its parent in the merge tree. tests are green, the design has been satisfied", "should_trigger": true},
+  {"query": "The bead is in_progress on a feature worktree and the work is done — propagate it up the tree and mark it complete.", "should_trigger": true},
+
+  {"query": "Merge these two PRs into a single one — they're for the same feature and reviewing them separately is a pain.", "should_trigger": false},
+  {"query": "Explain how merge sort works algorithmically.", "should_trigger": false},
+  {"query": "There's a merge conflict in src/auth.ts. Resolve it for me.", "should_trigger": false},
+  {"query": "Merge the contents of two CSV files based on the user_id column.", "should_trigger": false},
+  {"query": "Squash my last five commits into one before I push.", "should_trigger": false},
+  {"query": "How do I rebase my feature branch onto the latest main?", "should_trigger": false},
+  {"query": "I want to upmerge — pull main back into my long-lived feature branch.", "should_trigger": false},
+  {"query": "Just run git merge for me from the current branch into master.", "should_trigger": false},
+  {"query": "What does 'up-and-to-the-right' mean in startup metrics jargon? My boss keeps saying it.", "should_trigger": false},
+  {"query": "I've done some work on a single task, but it's not finished yet — I want to commit a checkpoint, not complete the task.", "should_trigger": false}
+]

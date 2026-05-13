@@ -1,0 +1,23 @@
+[
+  {"query": "Show me the current task tree for this project — what's in flight, what's blocked, what's ready to be picked up.", "should_trigger": true},
+  {"query": "where are we in the workflow right now? i want a top-down view of the merge tree and progress on each branch", "should_trigger": true},
+  {"query": "Visualize the current state of the beads — what's the shape of the epic and where are we on each leaf.", "should_trigger": true},
+  {"query": "I just got back from vacation. Catch me up on the state of the work — task tree, what's done, what's left.", "should_trigger": true},
+  {"query": "give me a picture of the current merge tree, color-coded or whatever, so I can see at a glance what's parallel-able right now", "should_trigger": true},
+  {"query": "Render the task tree so I can see the full structure — epic at the top, leaves at the bottom, dependencies between.", "should_trigger": true},
+  {"query": "what's ready to work on next? show the available work in context of the rest of the tree, not just a flat list", "should_trigger": true},
+  {"query": "Display the in-progress, blocked, and ready beads in tree form. I want to spot bottlenecks.", "should_trigger": true},
+  {"query": "show the whole project's task graph. i want to see which tasks block which and where the critical path is", "should_trigger": true},
+  {"query": "Pull up the current visualization of the task tree — like a quick health check on the workflow.", "should_trigger": true},
+
+  {"query": "Visualize this dataset as a bar chart in matplotlib.", "should_trigger": false},
+  {"query": "What are the best practices for data visualization in general? Reading for a class.", "should_trigger": false},
+  {"query": "Generate an architecture diagram for this codebase as a PNG.", "should_trigger": false},
+  {"query": "Show me a flowchart of the user-signup flow.", "should_trigger": false},
+  {"query": "I want to use D3 to visualize a graph in the browser — give me a starter implementation.", "should_trigger": false},
+  {"query": "Plot the response time of our API over the last week.", "should_trigger": false},
+  {"query": "List all open beads as a plain table. No tree, no fanciness.", "should_trigger": false},
+  {"query": "What does bd ready do, exactly? Just describe the command.", "should_trigger": false},
+  {"query": "Create a new task and add it to the tree.", "should_trigger": false},
+  {"query": "Close the bead I'm currently working on.", "should_trigger": false}
+]

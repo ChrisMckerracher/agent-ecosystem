@@ -1,0 +1,23 @@
+[
+  {"query": "I just looked at the task tree and one of the tasks is going to be like 1500 lines. That's way too big. Can we redistribute the work so each task stays around 500 lines?", "should_trigger": true},
+  {"query": "the merge tree is lopsided — half the leaves are tiny 50-line trivialities and one is a monster. fix the balance", "should_trigger": true},
+  {"query": "Split task claude_stuff-bzy into two — it's clearly two distinct concerns smushed together. Update the merge tree deps accordingly.", "should_trigger": true},
+  {"query": "We've got a 2000-line bead. That blows past the 1000-line cap. Break it up and rewire the parent/child relationships.", "should_trigger": true},
+  {"query": "look at the current task tree shape — the leaves are uneven. merge the trivially-small ones and split the giant one", "should_trigger": true},
+  {"query": "This decomposition turned out wrong — task A is doing what task B was supposed to. Reshape the tree.", "should_trigger": true},
+  {"query": "The auth-redesign epic has three subtasks but one of them is doing 80% of the work. Redistribute so the agents can parallelize properly.", "should_trigger": true},
+  {"query": "i estimated wrong during decompose. some tasks are bigger than expected. can we restructure the merge tree without redoing the whole design?", "should_trigger": true},
+  {"query": "Make the task tree more even. Combine the no-op tasks, split the heavyweight ones. Same overall scope.", "should_trigger": true},
+  {"query": "The leaf tasks aren't sized for one-shot agent runs. Reshape the merge tree so each leaf is closer to the 500-line target.", "should_trigger": true},
+
+  {"query": "Rebalance my retirement portfolio — too much in tech, not enough in bonds.", "should_trigger": false},
+  {"query": "Rebalance the production load balancer, we're seeing skew across the backend pool.", "should_trigger": false},
+  {"query": "How do you rebalance a red-black tree after an insertion? Just curious about the algorithm.", "should_trigger": false},
+  {"query": "Rebalance the gain across the audio channels in my mix.", "should_trigger": false},
+  {"query": "Re-balance is one word or two?", "should_trigger": false},
+  {"query": "Help me re-prioritize my todo list — too much on my plate today.", "should_trigger": false},
+  {"query": "Break this new feature design into a brand-new task tree. Nothing exists yet.", "should_trigger": false},
+  {"query": "Decompose the upcoming payments rewrite into a merge tree from scratch.", "should_trigger": false},
+  {"query": "Show me what's currently on the task tree — visualize the state, don't change anything.", "should_trigger": false},
+  {"query": "The current task is too big for me personally — can I get a teammate to take half of it? Don't change the tree.", "should_trigger": false}
+]
