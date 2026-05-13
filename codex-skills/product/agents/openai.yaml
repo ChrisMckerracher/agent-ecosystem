@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product"
+  short_description: "Write specs and validate product fit"
+  default_prompt: "Use $product to turn this request into a testable product spec."

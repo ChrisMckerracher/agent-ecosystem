@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rebalance"
+  short_description: "Restructure oversized beads tasks"
+  default_prompt: "Use $rebalance to resize and reorder this task tree."

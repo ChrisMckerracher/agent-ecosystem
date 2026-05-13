@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Harness"
+  short_description: "Persist feedback into standards"
+  default_prompt: "Use $update-harness to turn this feedback into a durable repo rule."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify"
+  short_description: "Define project-specific checks"
+  default_prompt: "Use $verify to create a project-specific review check."

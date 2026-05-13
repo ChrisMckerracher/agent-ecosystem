@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visualize"
+  short_description: "Show beads task tree progress"
+  default_prompt: "Use $visualize to show current beads progress and ready work."

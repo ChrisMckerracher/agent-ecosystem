@@ -1,0 +1,4 @@
+interface:
+  display_name: "QA"
+  short_description: "Create tests and analyze coverage"
+  default_prompt: "Use $qa to generate tests for this feature spec."

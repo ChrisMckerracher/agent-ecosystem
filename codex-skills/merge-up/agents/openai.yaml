@@ -1,0 +1,4 @@
+interface:
+  display_name: "Merge Up"
+  short_description: "Merge completed task branches upward"
+  default_prompt: "Use $merge-up to merge completed task work into its parent branch."

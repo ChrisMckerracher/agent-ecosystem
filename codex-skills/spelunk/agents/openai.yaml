@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spelunk"
+  short_description: "Generate focused code exploration docs"
+  default_prompt: "Use $spelunk to document the relevant code paths for this area."

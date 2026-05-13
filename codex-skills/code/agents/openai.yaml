@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code"
+  short_description: "Implement beads tasks with tests"
+  default_prompt: "Use $code to implement the next ready task with tests."

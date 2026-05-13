@@ -1,0 +1,4 @@
+interface:
+  display_name: "Task Complete"
+  short_description: "Finish and merge beads task work"
+  default_prompt: "Use $task-complete to commit, merge, and close this task."

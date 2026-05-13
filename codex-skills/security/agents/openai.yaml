@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security"
+  short_description: "Audit security-sensitive changes"
+  default_prompt: "Use $security to audit these changes for vulnerabilities."

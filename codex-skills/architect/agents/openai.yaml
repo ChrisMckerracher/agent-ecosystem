@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architect"
+  short_description: "Design features and architecture plans"
+  default_prompt: "Use $architect to design this feature and prepare an implementation plan."

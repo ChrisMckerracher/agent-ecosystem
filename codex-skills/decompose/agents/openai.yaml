@@ -1,0 +1,4 @@
+interface:
+  display_name: "Decompose"
+  short_description: "Build beads merge-tree task plans"
+  default_prompt: "Use $decompose to split this approved design into beads tasks."
