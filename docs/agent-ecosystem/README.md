@@ -74,7 +74,7 @@ Commands invoke agents and workflows directly:
 | `/merge-up` | Merge completed children to parent |
 | `/rebalance` | Split large tasks, consolidate small ones |
 | `/dashboard` | Open web UI at localhost:3847 |
-| `/update-claude` | Update CLAUDE.md with feedback |
+| `/update-harness` | Route feedback into the right standards file (or create a new one) |
 | `/verify` | Create custom verification cycles |
 
 ### Agent Examine Mode

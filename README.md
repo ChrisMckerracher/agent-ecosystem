@@ -54,7 +54,7 @@ Then in a fresh repo:
 | | `/verify` | Run project-specific verification cycles |
 | **Coordination** | `/orchestrator` | Route work between specialist agents |
 | | `/merge-up` | Merge a completed leaf task up to its epic |
-| | `/update-claude` | Update CLAUDE.md with new conventions or feedback |
+| | `/update-harness` | Route new conventions/feedback into the right `docs/standards/*` file (or create a new one) |
 | **Visibility** | `/visualize` | Show the task tree with progress and ready work |
 | | `/dashboard` | Open the agent ecosystem dashboard |
 
