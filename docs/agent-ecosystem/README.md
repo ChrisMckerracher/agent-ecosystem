@@ -6,7 +6,7 @@
 
 > **Orchestrate AI agents for software development.** Design, implement, review, and ship with 7 specialized agents that collaborate through merge tree workflows.
 
-A [Claude Code](https://claude.ai/code) plugin providing specialized agents, persistent codebase exploration, and invisible task tracking via [beads](https://github.com/steveyegge/beads).
+A [Claude Code](https://claude.ai/code) plugin providing specialized agents, persistent codebase exploration, and invisible task tracking via [beads](https://github.com/gastownhall/beads).
 
 ## Overview
 
@@ -29,10 +29,12 @@ This plugin provides:
 /plugin install agent-ecosystem
 ```
 
-Requires [beads](https://github.com/steveyegge/beads) for task tracking:
+Requires [beads](https://github.com/gastownhall/beads) 1.0+ for task tracking:
 
 ```bash
-go install github.com/steveyegge/beads/cmd/bd@latest
+brew install beads                                                                # macOS/Linux
+# or:
+curl -sSL https://raw.githubusercontent.com/gastownhall/beads/main/scripts/install.sh | bash
 ```
 
 ### LSP Support
@@ -365,7 +367,7 @@ The dashboard displays:
 
 ### Required
 
-- [beads](https://github.com/steveyegge/beads) - Git-backed task tracking for AI agents
+- [beads](https://github.com/gastownhall/beads) - Git-backed task tracking for AI agents
 - [Claude Code](https://claude.ai/code) - Anthropic's CLI for Claude
 - Node.js 18+ (required for dashboard and TypeScript tooling)
 - `jq` - JSON processing (for hooks)
@@ -384,5 +386,5 @@ The dashboard displays:
 
 ## Credits
 
-- [beads](https://github.com/steveyegge/beads) by Steve Yegge - Task tracking infrastructure
+- [beads](https://github.com/gastownhall/beads) by Steve Yegge - Task tracking infrastructure
 - [superpowers](https://github.com/obra/superpowers) by Jesse Vincent - Skill patterns and TDD workflow

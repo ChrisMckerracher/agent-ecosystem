@@ -10,7 +10,7 @@
 **Features:**
 - Merge tree workflows for parallel task execution
 - Persistent codebase exploration (spelunk)
-- Invisible task tracking via [beads](https://github.com/steveyegge/beads)
+- Invisible task tracking via [beads](https://github.com/gastownhall/beads) (Dolt SQL, multi-agent coordination)
 
 ```bash
 /architect    # Co-design with human
@@ -35,7 +35,7 @@
 ## Requirements
 
 - [Claude Code](https://claude.ai/code) 2.0.74+
-- [beads](https://github.com/steveyegge/beads) - `go install github.com/steveyegge/beads/cmd/bd@latest`
+- [beads](https://github.com/gastownhall/beads) 1.0+ — `brew install beads` (macOS/Linux) or `curl -sSL https://raw.githubusercontent.com/gastownhall/beads/main/scripts/install.sh | bash`
 - Node.js 18+
 
 ---
