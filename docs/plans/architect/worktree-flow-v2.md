@@ -2,7 +2,7 @@
 
 **Status:** Draft
 **Date:** 2026-02-01
-**Author:** Architecture Agent
+**Author:** Architect Agent
 **Supersedes:** `worktree-per-task.md`, `epic-worktree-integration.md`
 
 ---

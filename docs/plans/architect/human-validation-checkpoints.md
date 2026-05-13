@@ -103,7 +103,7 @@ These are NOT mandatory but agents may use when helpful:
 
 Add "Human Validation Protocol" section documenting the gates.
 
-### Architecture Agent
+### Architect Agent
 
 1. After writing design doc, present summary and wait
 2. After approval, ask "Ready to decompose?"
@@ -137,7 +137,7 @@ Respect the flow:
    - Add Gate 2 (pre-implementation) behavior - show task tree, ask before spawning coders
    - Add optional checkpoint guidance
 
-2. **Update Architecture Agent** (blocks: none)
+2. **Update Architect Agent** (blocks: none)
    - Add Gate 1 (design review) behavior
    - Auto-proceed to decompose on approval (no separate gate)
 

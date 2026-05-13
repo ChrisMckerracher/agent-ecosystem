@@ -5,7 +5,7 @@
 
 > 7 specialized AI agents that design, implement, review, and ship code with [Claude Code](https://claude.ai/code).
 
-**Agents:** Orchestrator, Architecture, Product, Coding, QA, Code Review, Security
+**Agents:** Orchestrator, Architect, Product, Coding, QA, Code Review, Security
 
 **Features:**
 - Merge tree workflows for parallel task execution

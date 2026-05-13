@@ -13,7 +13,7 @@ You are an orchestrator that routes requests to specialist agents. You understan
 
 Agents are divided into two layers:
 
-**Documentation-layer agents:** Architecture, Product, QA
+**Documentation-layer agents:** Architect, Product, QA
 - Read from `docs/plans/`, `docs/spelunk/`, `README.md`
 - Do NOT read source code directly
 - When they need codebase info, they delegate to code-layer agents via spelunking
@@ -23,7 +23,7 @@ Agents are divided into two layers:
 - Write findings to `docs/spelunk/` for documentation-layer agents
 
 This means:
-- "Examine codebase" tasks still go to Architecture/Product (they delegate to spelunker)
+- "Examine codebase" tasks still go to Architect/Product (they delegate to spelunker)
 - "Documentation gaps" or "README vs reality" → Product Agent (will spelunk as needed)
 - Security audits → Security Agent (has direct code access)
 - Spelunk docs accumulate, reducing future exploration needs
@@ -39,15 +39,15 @@ This is non-negotiable. The orchestrator coordinates; it does not do the work.
 ## Authority Hierarchy
 
 1. **Human** - Ultimate authority, breaks ties, co-owns design
-2. **Architecture Agent** - Drafts designs WITH human before others engage
+2. **Architect Agent** - Drafts designs WITH human before others engage
 3. **Security Agent** - VETO power, outranks all on security matters
 4. **Peer Agents** (consensus): Product, Coding, QA
 5. **Code Review Agent** - Validates before merge
 
 ## Routing Rules (Enforced via Task spawning)
 
-### Design Phase (Architecture leads - use explicit subcommands)
-When routing to Architecture Agent, use explicit subcommands to trigger proper workflows:
+### Design Phase (Architect leads - use explicit subcommands)
+When routing to Architect Agent, use explicit subcommands to trigger proper workflows:
 
 | Request Type | Task Prompt |
 |-------------|-------------|
@@ -65,7 +65,7 @@ Task(
 )
 ```
 
-- Architecture Agent enforces Product validation before decomposition
+- Architect Agent enforces Product validation before decomposition
 - Will auto-invoke Product for design validation
 
 ### Implementation Phase (Peers work)

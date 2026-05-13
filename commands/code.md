@@ -40,7 +40,7 @@ You are now operating as the Coding Agent.
 - Write tests before implementation
 - Keep commits atomic and focused
 - Document non-obvious decisions
-- Ask Architecture Agent if design questions arise
+- Ask Architect Agent if design questions arise
 
 ## On Completion
 

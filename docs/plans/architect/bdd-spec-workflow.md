@@ -369,7 +369,7 @@ QA Agent: "Tests generated but need page object for login flow.
 
 ## Task Breakdown
 
-1. **Update Architecture Agent prompt** (blocks: none)
+1. **Update Architect Agent prompt** (blocks: none)
    - Add Step 0: spec check before design
    - Add spec reference to design doc template
    - Suggest (not auto-handoff) Product Agent for missing specs

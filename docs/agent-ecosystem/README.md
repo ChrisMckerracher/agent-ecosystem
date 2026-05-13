@@ -12,7 +12,7 @@ A [Claude Code](https://claude.ai/code) plugin providing specialized agents, per
 
 This plugin provides:
 
-- **7 Specialist Agents** - Orchestrator, Architecture, Product, Coding, QA, Code Review, Security
+- **7 Specialist Agents** - Orchestrator, Architect, Product, Coding, QA, Code Review, Security
 - **Spelunk System** - Persistent codebase exploration with hash-based cache validation
 - **Dashboard** - Web UI for visualizing tasks and git diffs (localhost:3847)
 - **Merge Tree Workflows** - Decompose features into dependent tasks, track progress
@@ -179,7 +179,7 @@ The workflow includes 3 mandatory approval points where agents pause for human c
                 [Human]
                    ^ (ultimate authority)
                    |
-          [Architecture Agent]  <- drafts design first
+          [Architect Agent]  <- drafts design first
                    |
             [Security Agent]    <- VETO power
                    |
@@ -198,7 +198,7 @@ The workflow includes 3 mandatory approval points where agents pause for human c
 |-------|------|----------------|
 | **Orchestrator** | Route | Routes requests to appropriate agents |
 | | Status | Shows ready tasks, progress, blockers |
-| **Architecture** | Examine | Analyze codebase structure, patterns, boundaries |
+| **Architect** | Examine | Analyze codebase structure, patterns, boundaries |
 | | Execute | Co-draft designs, decompose into merge trees |
 | **Product** | Examine | Understand what problem codebase solves (uses spelunk) |
 | | Execute | Validate designs match product expectations |

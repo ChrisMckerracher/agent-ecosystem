@@ -31,7 +31,7 @@ fi
 # Check required agent files
 AGENTS=(
     "agents/orchestrator.md"
-    "agents/architecture.md"
+    "agents/architect.md"
     "agents/product.md"
     "agents/coding.md"
     "agents/qa.md"

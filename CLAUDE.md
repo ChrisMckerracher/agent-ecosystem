@@ -7,7 +7,7 @@ This file provides guidance for Claude Code when working in this repository.
 Agent Ecosystem is a Claude Code plugin providing 7 specialized AI agents for software development workflows. It uses beads for task tracking and merge tree workflows for feature decomposition.
 
 **Key Components:**
-- **7 Specialist Agents:** Orchestrator, Architecture, Product, Coding, QA, Code Review, Security
+- **7 Specialist Agents:** Orchestrator, Architect, Product, Coding, QA, Code Review, Security
 - **Spelunk System:** Persistent codebase exploration with hash-based cache validation
 - **Merge Tree Workflows:** Decompose features into dependent tasks
 
@@ -51,7 +51,7 @@ bd ready  # Show available tasks
 ```
 Human (ultimate authority)
   |
-Architecture Agent (drafts design first)
+Architect Agent (drafts design first)
   |
 Security Agent (VETO power)
   |

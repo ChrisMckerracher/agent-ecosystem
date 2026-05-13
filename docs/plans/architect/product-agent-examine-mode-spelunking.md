@@ -1,7 +1,7 @@
 # Product Agent Examine Mode Spelunking
 
 **Status:** DRAFT
-**Author:** Architecture Agent
+**Author:** Architect Agent
 **Date:** 2026-01-10
 
 ## Problem

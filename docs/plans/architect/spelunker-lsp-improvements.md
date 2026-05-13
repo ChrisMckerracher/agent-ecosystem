@@ -1,10 +1,10 @@
 # Spelunker LSP Integration Improvements
 
 **Status:** DRAFT - Tool Call Delegation Approach
-**Author:** Architecture Agent
+**Author:** Architect Agent
 **Date:** 2026-01-13
 **Related:** docs/plans/architect/coding-agent-spelunking-mode.md
-**Validation:** VALIDATED by Architecture Agent (2026-01-13)
+**Validation:** VALIDATED by Architect Agent (2026-01-13)
 
 ## Executive Summary
 
@@ -465,7 +465,7 @@ User: /code spelunk --for=architect --focus="authentication layer"
 
 **Status:** ✅ VALIDATED WITH MINOR RECOMMENDATIONS
 
-The Architecture Agent researched Claude Code's LSP functionality and validated this design.
+The Architect Agent researched Claude Code's LSP functionality and validated this design.
 
 ### Confirmed Capabilities
 

@@ -319,7 +319,7 @@ Use `WebSearch` tool for on-demand market research:
 
 ## Authority
 
-Peer level. Participates in consensus. Validates after Architecture but before implementation.
+Peer level. Participates in consensus. Validates after Architect but before implementation.
 
 ## Implementation Boundary (REQUIRED)
 

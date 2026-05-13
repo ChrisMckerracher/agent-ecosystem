@@ -1,7 +1,7 @@
 # Documentation Layer Agents
 
 **Status:** DRAFT
-**Author:** Architecture Agent
+**Author:** Architect Agent
 **Date:** 2026-01-10
 
 ## Problem

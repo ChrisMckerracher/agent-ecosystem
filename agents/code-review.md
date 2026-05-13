@@ -12,7 +12,7 @@ tools: Read, Glob, Grep, Bash, Task, TodoWrite
 ### Design Review Mode
 Review architecture designs for engineering principle compliance BEFORE implementation begins.
 
-**Invoked by:** Architecture Agent during design validation (parallel with Product Agent)
+**Invoked by:** Architect Agent during design validation (parallel with Product Agent)
 
 **Process:**
 1. Read design doc from `docs/plans/architect/<feature-name>.md`

@@ -2,7 +2,7 @@
 
 **Date:** 2026-01-15
 **Status:** DRAFT
-**Author:** Architecture Agent
+**Author:** Architect Agent
 
 ---
 

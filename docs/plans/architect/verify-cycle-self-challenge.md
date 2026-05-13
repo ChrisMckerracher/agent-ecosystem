@@ -1,7 +1,7 @@
 # Design Challenge: Verify Cycle Skill
 
 **Date:** 2026-01-15
-**Challenger:** Architecture Agent (self-review)
+**Challenger:** Architect Agent (self-review)
 **Design Document:** `docs/plans/architect/verify-cycle-skill.md`
 
 ---

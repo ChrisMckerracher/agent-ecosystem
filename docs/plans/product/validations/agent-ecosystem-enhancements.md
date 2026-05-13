@@ -53,7 +53,7 @@ All four issues are legitimate product concerns that affect user experience with
 
 **Enhancement 4: Product and Security agent upgrades**
 - Product Agent at 201 lines already has structure; strengthening is incremental
-- Security Agent at 42 lines is significantly underspecified compared to Architecture Agent
+- Security Agent at 42 lines is significantly underspecified compared to Architect Agent
 - Structured output locations (`docs/plans/security/audits/`, `docs/plans/security/vetos/`) bring consistency
 - Templates for audit reports and VETO reports improve reproducibility
 - Dual-layer access for Security is correct - security audits require code access
@@ -92,7 +92,7 @@ Each enhancement is narrowly scoped:
 | Product upgrade | 1 file, section additions | Low |
 | Security upgrade | 1 file, full rewrite (42 lines -> ~200 lines) | Medium |
 
-The Security Agent rewrite is the largest change but is necessary to bring it to parity with Architecture Agent quality.
+The Security Agent rewrite is the largest change but is necessary to bring it to parity with Architect Agent quality.
 
 ---
 

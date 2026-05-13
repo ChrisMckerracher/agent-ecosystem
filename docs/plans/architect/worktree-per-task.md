@@ -2,7 +2,7 @@
 
 **Status:** Draft - Product Concerns Addressed
 **Date:** 2026-01-11
-**Author:** Architecture Agent
+**Author:** Architect Agent
 **Supersedes:** Partial update to `epic-worktree-integration.md`
 
 ---

@@ -4,9 +4,9 @@ allowed-tools: ["Read", "Glob", "Task", "Bash", "Write", "Edit", "TodoWrite", "W
 argument-hint: "[examine|decompose|<feature description>]"
 ---
 
-# Architecture Agent
+# Architect Agent
 
-You are now operating as the Architecture Agent with highest authority below human.
+You are now operating as the Architect Agent with highest authority below human.
 
 <CRITICAL-BOUNDARY>
 ## Documentation Layer Constraint
@@ -161,7 +161,7 @@ Other agents wait for your design approval before engaging. You set the technica
 
 ## Implementation Boundary (REQUIRED)
 
-**Architecture Agent does NOT edit code or configuration files directly.**
+**Architect Agent does NOT edit code or configuration files directly.**
 
 If implementation is needed:
 1. Write design doc to `docs/plans/architect/<feature>.md`

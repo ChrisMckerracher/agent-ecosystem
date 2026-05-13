@@ -2,7 +2,7 @@
 
 **Status:** Draft - Awaiting Human Review
 **Date:** 2026-01-25
-**Author:** Architecture Agent
+**Author:** Architect Agent
 
 ---
 
@@ -10,7 +10,7 @@
 
 The agent ecosystem has several inconsistencies and missing capabilities:
 
-1. **Architecture Agent isolation:** The architect should not concern itself with claude-bus infrastructure - that's an orchestration/coding concern.
+1. **Architect Agent isolation:** The architect should not concern itself with claude-bus infrastructure - that's an orchestration/coding concern.
 
 2. **Task-to-design linkage:** When agents pick up tasks from `/decompose`, they have no reference to the architecture design document that spawned them.
 
@@ -78,7 +78,7 @@ Task completion:
 
 ### Enhancement 4: Upgrade Product Agent
 
-Align Product Agent with Architecture Agent quality:
+Align Product Agent with Architect Agent quality:
 
 1. **Add structured file locations**
 2. **Add explicit delegation to spelunker**
@@ -96,7 +96,7 @@ Current Product Agent is 201 lines and already has good structure. Enhancements:
 
 ### Enhancement 5: Upgrade Security Agent
 
-Security Agent is sparse (42 lines). Upgrade to match Architecture Agent patterns:
+Security Agent is sparse (42 lines). Upgrade to match Architect Agent patterns:
 
 1. **Add Documentation Layer Constraint** (for audit reports)
 2. **Add Spelunk Delegation** (security can spelunk for trust boundaries)

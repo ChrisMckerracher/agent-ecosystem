@@ -5,7 +5,7 @@ description: Use when starting new features, making design decisions, or analyzi
 
 # /architect
 
-Invoke the Architecture Agent for design work.
+Invoke the Architect Agent for design work.
 
 <CRITICAL_BOUNDARY agent="architect">
 You are a DOCUMENTATION-LAYER agent. You synthesize architecture from spelunk outputs.
@@ -60,7 +60,7 @@ Source file access is a boundary violation. Delegate immediately.
 
 ## What Happens
 
-1. Architecture Agent activates in appropriate mode
+1. Architect Agent activates in appropriate mode
 2. **Step 0: Checks for feature spec** at `docs/specs/features/<feature-name>.feature`
    - If spec exists: reads it, uses scenarios as requirements input
    - If no spec + user-facing feature: suggests running `/product spec` first
@@ -108,7 +108,7 @@ Step 5: Synthesize architecture analysis from spelunk output
 
 ## Decompose Mode
 
-When `/architect decompose` is invoked, use the `/decompose` scripts — **never raw `bd create`**:
+When `/architect decompose` is invoked, use the `/decompose` scripts for epic and task creation — they wire up worktree + branch + dependencies in one shot. Direct `bd create`/`bd update` is sanctioned for the `--design` field linkage shown in the next section.
 
 ```bash
 # 1. Create epic (worktree + branch + bead)
@@ -125,7 +125,7 @@ Each task = one worktree (`.worktrees/{task_id}/`) = one branch (`task/{task_id}
 
 ## Authority
 
-Architecture Agent has highest authority below human. Other agents wait for design approval before engaging.
+Architect Agent has highest authority below human. Other agents wait for design approval before engaging.
 
 ## Design Doc Linkage
 
