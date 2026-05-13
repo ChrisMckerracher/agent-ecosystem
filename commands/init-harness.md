@@ -17,6 +17,44 @@ installer at `{AGENT_ECOSYSTEM_ROOT}/scripts/init-harness/install.sh`.
 > When #9354 lands, swap `{AGENT_ECOSYSTEM_ROOT}` → `${CLAUDE_PLUGIN_ROOT}` and
 > drop the hook injection.
 
+## Resolving the install script (defensive)
+
+The placeholder above is the primary path, but it can fail in four ways:
+hook didn't fire, `CLAUDE_PLUGIN_ROOT` was empty in the hook env,
+`CLAUDE_PLUGIN_ROOT` was stale (resolved to `.../unknown/`), or the line was
+dropped from context. When you (Claude) cannot locate the install script via
+the placeholder, recover with this chain:
+
+1. **Primary** — try the substituted placeholder:
+   `bash "{AGENT_ECOSYSTEM_ROOT}/scripts/init-harness/install.sh" ...`
+
+2. **Recovery 1** — if the path is empty, unset, or the file doesn't exist,
+   try `${CLAUDE_PLUGIN_ROOT}` directly (it may work in some local-dev
+   scenarios):
+   ```
+   bash "${CLAUDE_PLUGIN_ROOT}/scripts/init-harness/install.sh" ...
+   ```
+
+3. **Recovery 2** — if that also fails, discover the script by globbing the
+   marketplace cache:
+   ```bash
+   INSTALL_SH="$(find ~/.claude/plugins -path '*/init-harness/install.sh' \
+                                         -type f 2>/dev/null | head -1)"
+   ```
+   Validate it: `[ -x "$INSTALL_SH" ]`. If multiple matches exist (dev +
+   marketplace), the first is taken — warn the user briefly.
+
+4. **Final fallback** — if all three return nothing, do NOT guess a path or
+   inline the install logic. Tell the user:
+   > Cannot locate the init-harness install script. The plugin may not be
+   > installed correctly. The script should live under
+   > `~/.claude/plugins/.../agent-ecosystem*/scripts/init-harness/install.sh`.
+   > Run `ls ~/.claude/plugins/` to see what's installed and re-invoke
+   > with `--plugin-root <path>` once you've located it, or reinstall the
+   > plugin.
+
+   Then stop. Do not proceed.
+
 ## What this lays down
 
 - `AGENTS.md` — single source of truth, numbered atomic operating rules, required read order
@@ -46,11 +84,12 @@ exists, it aborts with exit 2 and writes zero files. The user must either:
    - project name (default: directory basename)
    - language preset: `python`, `typescript`, or `polyglot` (default: `polyglot`)
    - whether to do a `--dry-run` first
-2. Run the installer (substitute `{AGENT_ECOSYSTEM_ROOT}` with the value from
-   the SessionStart hook):
+2. Resolve the install script via the chain in **Resolving the install script
+   (defensive)** above. The happy path is the placeholder; the recovery chain
+   handles broken hooks / stale `CLAUDE_PLUGIN_ROOT` / dropped context. Then
+   invoke:
    ```
-   bash "{AGENT_ECOSYSTEM_ROOT}/scripts/init-harness/install.sh" \
-       --root <root> --project-name <name> --language <lang> [--dry-run] [--force]
+   bash "$INSTALL_SH" --root <root> --project-name <name> --language <lang> [--dry-run] [--force]
    ```
    Always double-quote the path — `~/.claude/plugins/...` paths may contain
    spaces.
