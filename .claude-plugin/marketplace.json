@@ -11,9 +11,9 @@
     {
       "name": "agent-ecosystem",
       "description": "7 specialist agents with merge tree workflows and spelunk exploration",
-      "version": "0.14.0",
+      "version": "0.15.0",
       "author": { "name": "chrismck" },
-      "source": "./plugin",
+      "source": ".",
       "category": "productivity",
       "tags": ["agents", "beads", "merge-tree", "tdd", "workflow", "spelunk", "orchestrator"]
     }
