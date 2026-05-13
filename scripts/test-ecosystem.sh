@@ -59,7 +59,7 @@ SKILLS=(
     "skills/visualize/SKILL.md"
     "skills/merge-up/SKILL.md"
     "skills/rebalance/SKILL.md"
-    "skills/update-claude/SKILL.md"
+    "skills/update-harness/SKILL.md"
 )
 
 for file in "${SKILLS[@]}"; do
@@ -114,7 +114,7 @@ COMMANDS=(
     "commands/product.md"
     "commands/merge-up.md"
     "commands/rebalance.md"
-    "commands/update-claude.md"
+    "commands/update-harness.md"
     "commands/orchestrator.md"
 )
 
