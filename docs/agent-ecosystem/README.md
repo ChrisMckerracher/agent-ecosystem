@@ -17,9 +17,8 @@ This plugin provides:
 - **Dashboard** - Web UI for visualizing tasks and git diffs (localhost:3847)
 - **Merge Tree Workflows** - Decompose features into dependent tasks, track progress
 - **Invisible Task Tracking** - Beads infrastructure hidden from user (you see "tasks", not `bd` commands)
-- **GitLab Integration** - Pull MR comments, push MRs, sync feedback
 - **Quality Gates** - Automatic security and code review hooks
-- **16 Commands** - Direct agent invocation and workflow management
+- **14 Commands** - Direct agent invocation and workflow management
 
 ---
 
@@ -73,8 +72,6 @@ Commands invoke agents and workflows directly:
 | `/merge-up` | Merge completed children to parent |
 | `/rebalance` | Split large tasks, consolidate small ones |
 | `/dashboard` | Open web UI at localhost:3847 |
-| `/gitlab-pull-comments` | Fetch MR feedback |
-| `/gitlab-push-mr` | Create/update MR |
 | `/update-claude` | Update CLAUDE.md with feedback |
 | `/verify` | Create custom verification cycles |
 
@@ -334,26 +331,6 @@ See `hooks/README.md` for full configuration.
 
 ---
 
-## GitLab Integration
-
-### Requirements
-
-```bash
-export GITLAB_TOKEN="your-token"
-export GITLAB_HOST="https://gitlab.com"  # or your self-hosted instance
-```
-
-### Commands
-
-```bash
-/gitlab-pull-comments        # Fetch MR comments for current branch
-/gitlab-pull-comments 123    # Fetch comments for MR #123
-/gitlab-push-mr              # Create MR for current branch
-/gitlab-push-mr --update     # Update existing MR description
-```
-
----
-
 ## Dashboard
 
 The web dashboard provides task visualization and git diff viewing at `http://localhost:3847`.
@@ -382,14 +359,6 @@ The dashboard displays:
 | Slow spelunk performance | Use `--max-files` to limit scope, or ensure LSP is working |
 | Stale spelunk documents | Use `--refresh` flag to force regeneration |
 
-### GitLab Integration
-
-| Problem | Solution |
-|---------|----------|
-| `GITLAB_TOKEN not set` | Set token: `export GITLAB_TOKEN="your-token"` |
-| MR creation fails | Verify `GITLAB_HOST` is set correctly for self-hosted instances |
-| Comments not appearing | Use `/gitlab-pull-comments --refresh` to sync latest feedback |
-
 ---
 
 ## Dependencies
@@ -403,7 +372,6 @@ The dashboard displays:
 
 ### Optional
 
-- `glab` - GitLab CLI for MR operations
 - Language servers for LSP-powered spelunking:
   - **TypeScript/JavaScript:** `npm install -g typescript-language-server` (vtsls)
   - **Python:** `npm install -g pyright`

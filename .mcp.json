@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "claude-bus": {
-      "command": "claude-bus",
-      "args": ["serve"]
-    }
-  }
-}

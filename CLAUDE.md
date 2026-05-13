@@ -10,7 +10,6 @@ Agent Ecosystem is a Claude Code plugin providing 7 specialized AI agents for so
 - **7 Specialist Agents:** Orchestrator, Architecture, Product, Coding, QA, Code Review, Security
 - **Spelunk System:** Persistent codebase exploration with hash-based cache validation
 - **Merge Tree Workflows:** Decompose features into dependent tasks
-- **GitLab Integration:** Pull MR comments, push MRs
 
 ## Build and Test Commands
 
@@ -195,12 +194,6 @@ Gherkin specs → Playwright tests flow:
 /review             # Check quality
 /security           # Security gate
 /merge-up           # Merge to parent
-```
-
-### GitLab Operations
-```
-/gitlab-pull-comments    # Fetch MR feedback
-/gitlab-push-mr          # Create/update MR
 ```
 
 ## Plugin Development Notes

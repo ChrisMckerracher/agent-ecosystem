@@ -4,10 +4,6 @@ plugin/lib/dist/
 .beads/
 .worktrees/
 .test-analysis/
-__pycache__/
-.mypy_cache/
-*.egg-info/
-.venv/
 
 # Beads / Dolt files (added by bd init)
 .dolt/

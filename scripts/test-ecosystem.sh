@@ -60,8 +60,6 @@ SKILLS=(
     "skills/merge-up/SKILL.md"
     "skills/rebalance/SKILL.md"
     "skills/update-claude/SKILL.md"
-    "skills/gitlab-pull-comments/SKILL.md"
-    "skills/gitlab-push-mr/SKILL.md"
 )
 
 for file in "${SKILLS[@]}"; do
@@ -117,8 +115,6 @@ COMMANDS=(
     "commands/merge-up.md"
     "commands/rebalance.md"
     "commands/update-claude.md"
-    "commands/gitlab-pull-comments.md"
-    "commands/gitlab-push-mr.md"
     "commands/orchestrator.md"
 )
 
