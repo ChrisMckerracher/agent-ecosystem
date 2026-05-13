@@ -1,185 +1,138 @@
 ---
 name: merge-up
-description: Use when leaf tasks are complete and you need to merge up to the parent level
+description: Use when completing a task - commits work, merges to epic, rebases dependents, and closes the task bead
 ---
 
 # /merge-up
 
-Handle git merge + task status updates when children complete.
+Complete a task by atomically handling commit, merge to epic, dependent task rebase, and bead closure.
 
-## Process
-
-1. Check all child tasks are complete
-2. Perform git merge of child branches to parent branch
-3. Close parent bead
-4. Report what's newly unblocked
-
-## Pre-conditions
-
-- All child beads must be closed
-- All child branches must be merged or ready to merge
-- No merge conflicts (resolve first if any)
-- No unresolved merge state (check for MERGE_HEAD)
-
-## Merge Flow (Worktree-Aware)
-
-### Task -> Epic Branch
-
-When completing a task in a worktree:
+## Usage
 
 ```bash
-# 1. Commit work on task branch
-git add -A
-git commit -m "Complete ${task_id}: <description>"
-
-# 2. Switch to epic branch
-git checkout epic/${epic_root}
-
-# 3. Merge task branch
-git merge epic/${epic_root}/${task_id}
-
-# 4. Delete task branch (after successful merge)
-git branch -d epic/${epic_root}/${task_id}
-
-# 5. Close bead from project root
-project_root=$(dirname "$(git rev-parse --git-common-dir)")
-bd --cwd "${project_root}" close ${task_id} --reason "Merged to epic branch"
+/merge-up <task_id>
 ```
 
-### Auto-Cascade: Sibling Completion
+**Example:**
+```bash
+/merge-up claude_stuff-abc.1
+```
 
-When a task closes, check if all siblings are complete:
+## What It Does
+
+The `merge-up.sh` script performs the following operations in sequence:
+
+1. **Validates** the task exists and is open
+2. **Derives** the epic root from the task ID (e.g., `claude_stuff-abc.1` -> `claude_stuff-abc`)
+3. **Navigates** to the epic's worktree at `.worktrees/{epic_root}/`
+4. **Commits** any pending changes on the task branch
+5. **Merges** the task branch to the epic branch (with conflict detection)
+6. **Rebases** all dependent task branches that have this task as a blocker
+7. **Closes** the task bead with reason "Merged to epic, dependents rebased"
+8. **Outputs** status JSON indicating what was merged/rebased
+
+## Output
+
+Returns JSON status on stdout:
+
+```json
+{
+  "task_id": "claude_stuff-abc.1",
+  "epic_id": "claude_stuff-abc",
+  "merged": true,
+  "rebased": ["claude_stuff-abc.2", "claude_stuff-abc.3"],
+  "rebase_failed": [],
+  "epic_commit": "a1b2c3d4"
+}
+```
+
+## Integration with /code Workflow
+
+The `/code` skill uses `merge-up.sh` as its final step when a task implementation is complete:
 
 ```bash
-# Check if all siblings complete
-parent_id="${task_id%.*}"  # e.g., bd-a3f8.2.1 -> bd-a3f8.2
-all_children_complete=$(bd --cwd "${project_root}" show ${parent_id} --json | jq -r '.blocking_issues | length == 0')
-
-if [[ "$all_children_complete" == "true" ]]; then
-  # Auto-merge parent to grandparent
-  # This cascades up the tree
-  /merge-up ${parent_id}
-fi
+# After tests pass and code review approves
+merge-up.sh "$task_id"
 ```
 
-**Cascade behavior:**
-- All leaves complete -> auto-merge sub-epic to parent
-- If conflict -> spawn new leaf bead: "Resolve merge conflict for ${parent_id}"
-- If resolution fails or stuck -> `/orchestrator` takes over, surfaces to human
+This replaces the previous manual `bd close` step, providing automatic merge and dependent rebase.
 
-### Epic -> Active Branch
+## Error Handling
 
-When an epic is complete (all children closed) and review passes:
+| Error Scenario | Behavior | Recovery |
+|----------------|----------|----------|
+| Task not found | Exit with error | Check task ID |
+| Task not open | Exit with error | Task already done? |
+| Merge conflict | Commit work, don't merge, exit 1 | Resolve conflicts manually in worktree, re-run |
+| Rebase conflict | Log conflict, continue to next dependent | Resolve manually, re-run |
+| Worktree missing | Exit with error | Run `decompose-init` to recreate |
+
+## Merge Conflict Recovery
+
+When a merge conflict occurs:
 
 ```bash
-# 1. Get active branch from label
-project_root=$(dirname "$(git rev-parse --git-common-dir)")
-active_branch=$(bd --cwd "${project_root}" show ${epic_id} --json | jq -r '.labels[]' | grep '^active-branch:' | sed 's/^active-branch://')
-
-# 2. Switch to project root and active branch
-cd ${project_root}
-git checkout ${active_branch}
-
-# 3. Merge epic branch to active branch
-git merge epic/${epic_id}
-
-# 4. Remove worktree
-git worktree remove .worktrees/${epic_id}
-
-# 5. Delete epic branch
-git branch -d epic/${epic_id}
-
-# 6. Close epic bead
-bd close ${epic_id} --reason "Merged to ${active_branch}"
+# Script exits with error message showing:
+cd .worktrees/{epic_root}
+git status              # See conflicts
+# Edit and resolve files
+git add <resolved-files>
+git commit
+merge-up.sh $task_id   # Re-run this command
 ```
 
-## Conflict Resolution Protocol
+## Rebase Conflict Recovery
 
-### 1. Detect Conflict
+When a dependent task has rebase conflicts:
 
 ```bash
-# Check for existing broken merge state FIRST
-if [[ -f "$(git rev-parse --git-dir)/MERGE_HEAD" ]]; then
-  echo "ERROR: Unresolved merge in progress"
-  echo "Run 'git merge --abort' or resolve conflicts first"
-  exit 1
-fi
-
-# Attempt merge
-git merge epic/${epic_root}/${task_id}
-# If exit code != 0 and "CONFLICT" in output -> conflict detected
+# Script logs conflict and continues
+cd .worktrees/{epic_root}
+git checkout task/{dependent_id}
+# Resolve conflicts in affected files
+git add <resolved-files>
+git rebase --continue
 ```
 
-### 2. Report to User (do NOT auto-resolve)
-
-```
-MERGE CONFLICT in .worktrees/${epic_root}/
-
-Conflicting files:
-- src/middleware/auth.ts
-- src/types/user.ts
-
-To resolve:
-1. cd .worktrees/${epic_root}
-2. Edit conflicting files
-3. git add <resolved-files>
-4. git commit
-5. Re-run /merge-up
-```
-
-### 3. Abort Merge State (leave repo clean for user)
-
+If resolution fails:
 ```bash
-git merge --abort
+git reset --hard epic/{epic_root}  # Abandon task work
+bd open {dependent_id} --reason "Rebase failed, reopening"
 ```
 
-### 4. Track Conflict in Bead Notes
+## Edge Cases
 
-```bash
-bd update ${task_id} --notes "CONFLICT: auth.ts, user.ts"
-```
+### No Dependent Tasks
 
-### 5. Spawn Resolution Task if Stuck
+Script completes successfully with empty `rebased` array.
 
-```bash
-bd create "Resolve merge conflict for ${task_id}" -t task -p 1
-bd dep add <new-id> ${task_id} --type blocks
-```
+### Multiple Blockers
 
-### 6. After Resolution
-
-Re-run `/merge-up`, which detects no conflict and proceeds normally.
-
-## Commands Reference
-
-```bash
-# Check children complete
-bd show <parent-id> --json | jq '.blocking_issues'
-
-# Find project root from anywhere
-project_root=$(dirname "$(git rev-parse --git-common-dir)")
-
-# Merge child branches (in worktree)
-git checkout <parent-branch>
-git merge <child-branch>
-
-# Close parent (from project root)
-bd --cwd "${project_root}" close <parent-id> --reason "Children merged"
-
-# Check what's unblocked
-bd ready --json
-```
-
-## Legacy Flow (Non-Worktree)
-
-For repos without worktrees, the original flow still works:
+When a task has multiple blockers, it rebases each time a blocker completes:
 
 ```
-Child branches (complete)
-    | git merge
-Parent branch (updated)
-    | bd close
-Parent bead (closed)
-    | check
-Grandparent unblocked?
+task1 completes -> task3 rebases (now has task1 changes)
+task2 completes -> task3 rebases again (now has task1 + task2 changes)
 ```
+
+### Dependent Branch Missing
+
+Script skips that task (logged to stderr).
+
+## Dependencies
+
+- `bd` - bead task management
+- `jq` - JSON parsing
+- `git` - version control
+
+## Script Location
+
+```
+scripts/merge-up.sh
+```
+
+## See Also
+
+- `/code` - Main skill that invokes merge-up
+- `/decompose` - Create epic and task structure
+- `/merge-up` - Manual merge control (legacy)

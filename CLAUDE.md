@@ -131,37 +131,32 @@ Three mandatory approval points where agents pause:
 
 ## Common Workflows
 
+### User-facing Surface
+
+Five slash commands cover the canonical flow:
+
+| Command | Purpose |
+|---------|---------|
+| `/architect` | Co-design feature with human; produces design doc + task tree |
+| `/product` | Write product brief or Gherkin feature spec |
+| `/code` | Implement a task (TDD; spawns QA/security agents as needed) |
+| `/review` | Quality + security gate (invokes Security agent for auth/crypto changes) |
+| `/merge-up` | Atomically complete a task: commit, merge to epic, rebase dependents, close bead |
+
+The orchestrator command (`/orchestrator`) routes requests to specialist agents when the right entry point is unclear. The QA, Security, Product, and Code Review agents remain available via the Task tool — they are invoked by the orchestrator and by `/code`/`/review` rather than directly by the user.
+
 ### Start New Feature
 ```
-/product spec       # Write Gherkin feature spec (QA reviews)
-/architect          # Co-design with human (reads spec if exists)
-/decompose          # Create task tree
-/visualize          # See what's ready
+/product spec   # Optional: write Gherkin spec for BDD work
+/architect      # Co-design with human; creates task tree via decompose scripts
+bd ready        # See what's unblocked
 ```
-
-### BDD Feature Spec Workflow
-```
-/product spec                    # Product writes Gherkin spec
-                                 # QA reviews (conversational approval)
-/architect                       # Architect reads spec, designs solution
-/decompose                       # Break into tasks
-/code                            # Implement features
-/qa generate-tests <spec-path>   # QA generates Playwright tests from spec
-                                 # Tests run with video recording
-```
-
-Gherkin specs → Playwright tests flow:
-- Given/When/Then → arrange/act/assert
-- Background → beforeEach hook
-- Scenario Outline → parameterized tests
-- Video captured on test retry for debugging
 
 ### Implement Task
 ```
-/code               # Implement task (TDD)
-/review             # Check quality
-/security           # Security gate
-/merge-up           # Merge to parent
+/code           # Implement task (TDD; spawns QA/security agents internally)
+/review         # Quality + security gate
+/merge-up       # Merge to parent and close bead
 ```
 
 ## Plugin Development Notes

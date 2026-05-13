@@ -85,7 +85,7 @@ Implement tasks using TDD workflow.
    - If worktree doesn't exist:
      - Check `bd show {task-id} --json | jq '.blocked_by'`
      - If blocked: STOP - "Task blocked by [list]. Wait for blockers to complete."
-     - If not blocked: Create worktree (see /decompose)
+     - If not blocked: Create worktree (see `scripts/decompose-task.sh`)
    - All edits MUST happen in the task worktree, NOT main repo
 
 3. **Claim task:**
@@ -140,7 +140,7 @@ Location: .worktrees/{task-id}/
 Branch: task/{task-id}
 ```
 
-After commit, use `/task-complete` to merge task → epic → main branch.
+After commit, use `/merge-up` to merge task → epic → main branch.
 
 ## Scope Rules
 

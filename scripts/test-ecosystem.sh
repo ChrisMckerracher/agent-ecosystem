@@ -20,12 +20,12 @@ else
     fail "beads not installed"
 fi
 
-# Check plugin directory
-PLUGIN_DIR="$HOME/.claude/plugins/local/agent-ecosystem"
-if [ -d "$PLUGIN_DIR" ]; then
-    pass "plugin directory exists"
+# Plugin root = repo root (one level up from this script)
+PLUGIN_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+if [ -f "$PLUGIN_DIR/.claude-plugin/plugin.json" ]; then
+    pass "plugin root resolved: $PLUGIN_DIR"
 else
-    fail "plugin directory missing"
+    fail "plugin root missing .claude-plugin/plugin.json (looked in $PLUGIN_DIR)"
 fi
 
 # Check required agent files
@@ -47,19 +47,14 @@ for file in "${AGENTS[@]}"; do
     fi
 done
 
-# Check required skill files
+# Check required skill files (MVP: 5 user-facing skills + spelunk internal)
 SKILLS=(
     "skills/architect/SKILL.md"
     "skills/product/SKILL.md"
     "skills/code/SKILL.md"
-    "skills/qa/SKILL.md"
     "skills/review/SKILL.md"
-    "skills/security/SKILL.md"
-    "skills/decompose/SKILL.md"
-    "skills/visualize/SKILL.md"
     "skills/merge-up/SKILL.md"
-    "skills/rebalance/SKILL.md"
-    "skills/update-claude/SKILL.md"
+    "skills/spelunk/SKILL.md"
 )
 
 for file in "${SKILLS[@]}"; do
@@ -102,19 +97,13 @@ for file in "${TEMPLATES[@]}"; do
     fi
 done
 
-# Check commands (slash commands)
+# Check commands (slash commands — MVP set + orchestrator)
 COMMANDS=(
     "commands/architect.md"
     "commands/code.md"
-    "commands/decompose.md"
-    "commands/visualize.md"
     "commands/review.md"
-    "commands/security.md"
-    "commands/qa.md"
     "commands/product.md"
     "commands/merge-up.md"
-    "commands/rebalance.md"
-    "commands/update-claude.md"
     "commands/orchestrator.md"
 )
 

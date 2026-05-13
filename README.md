@@ -13,10 +13,10 @@
 - Invisible task tracking via [beads](https://github.com/gastownhall/beads) (Dolt SQL, multi-agent coordination)
 
 ```bash
-/architect    # Co-design with human
-/decompose    # Break into parallel tasks
-/code         # Implement (TDD)
-/review       # Quality gate
+/architect    # Co-design with human; produces design doc + task tree
+/code         # Implement a task (TDD)
+/review       # Quality + security gate
+/merge-up     # Commit, merge to epic, close bead
 ```
 
 [Full Documentation](docs/agent-ecosystem/README.md)

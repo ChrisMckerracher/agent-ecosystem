@@ -1,43 +1,31 @@
 ---
-description: Handle git merge and task status when child tasks complete
-allowed-tools: ["Bash", "Read"]
-argument-hint: "<parent-task-id>"
+description: Complete a task — commit, merge to epic, rebase dependents, close the bead
+allowed-tools: ["Bash"]
+argument-hint: "<task-id>"
 ---
 
 # Merge Up
 
-Handle git merge and task status updates when all children of a task are complete.
+Atomically complete a task: commit pending work, merge the task branch to its epic, rebase dependent task branches, and close the bead.
 
-## Process
-
-1. Verify all child tasks are closed: `bd show <parent-task-id>`
-2. Check for merge conflicts in child branches
-3. Merge child branches into parent branch
-4. Run tests to verify integration
-5. If tests pass, close parent task: `bd close <parent-task-id>`
-6. Check if grandparent is now ready: `bd ready`
-
-## Git Commands
+## Usage
 
 ```bash
-# Switch to parent branch
-git checkout <parent-branch>
-
-# Merge each child
-git merge <child-branch-1>
-git merge <child-branch-2>
-
-# Run tests
-npm test  # or appropriate test command
-
-# If successful, mark complete
-bd close <parent-task-id>
+/merge-up <task-id>
 ```
 
-## On Conflict
+Example: `/merge-up claude_stuff-abc.1`
 
-If merge conflicts occur:
-1. List conflicting files
-2. Show conflict markers
-3. Ask for resolution guidance
-4. Do NOT auto-resolve without approval
+## What It Does
+
+Runs `${CLAUDE_PLUGIN_ROOT}/scripts/merge-up.sh <task-id>`, which:
+
+1. Validates the task exists and is open
+2. Derives the epic root from the task ID (e.g., `claude_stuff-abc.1` → `claude_stuff-abc`)
+3. Navigates to the epic's worktree at `.worktrees/{epic_root}/`
+4. Commits any pending changes on the task branch
+5. Merges the task branch to the epic branch (aborts on conflict)
+6. Rebases all dependent task branches that have this task as a blocker
+7. Closes the task bead
+
+See `skills/merge-up/SKILL.md` for the full skill workflow, conflict handling, and recovery procedures.

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
-# task-complete.sh - Complete a task by merging to epic and rebasing dependents
+# merge-up.sh - Complete a task by merging to epic and rebasing dependents
 #
-# Usage: task-complete.sh <task_id>
+# Usage: merge-up.sh <task_id>
 # Output: JSON status on stdout, logs on stderr
 #
 # This script:
@@ -18,7 +18,7 @@
 
 set -euo pipefail
 
-SCRIPT_NAME="task-complete.sh"
+SCRIPT_NAME="merge-up.sh"
 readonly VERSION="1.0.0"
 
 # Exit codes
@@ -264,7 +264,7 @@ ${YELLOW}Next steps:${NC}
 ${YELLOW}To abort the merge:${NC}
   cd $WORKTREE_PATH
   git merge --abort
-  # Keep working on the task, then re-run task-complete
+  # Keep working on the task, then re-run merge-up
 
 EOF
             exit "${EXIT_CONFLICT}"
