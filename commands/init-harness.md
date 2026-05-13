@@ -1,7 +1,7 @@
 ---
 description: Scaffold the universal harness (AGENTS.md, CLAUDE.md, CODEX.md, docs/) into a repo using a strict atomic-refuse installer
 allowed-tools: ["Bash", "Read", "AskUserQuestion"]
-argument-hint: "[--root PATH] [--project-name NAME] [--language python|typescript|polyglot] [--dry-run] [--force]"
+argument-hint: "[--root <PATH>] [--project-name <NAME>] [--language <python|typescript|polyglot>] [--dry-run] [--force]"
 ---
 
 # /init-harness
