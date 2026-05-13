@@ -30,6 +30,34 @@
 /plugin install agent-ecosystem
 ```
 
+Then in a fresh repo:
+
+```bash
+/init-harness    # Scaffold AGENTS.md + docs/standards/ + design-doc / spelunk homes
+```
+
+---
+
+## Slash Commands
+
+| Category | Command | What it does |
+|---|---|---|
+| **Init / setup** | `/init-harness` | Scaffold the universal harness (AGENTS.md, docs/standards, docs/plans/architect, docs/spelunk) into a target repo via a strict atomic-refuse installer |
+| **Design & planning** | `/architect` | Co-design new features or analyze codebase architecture |
+| | `/product` | Validate designs against product goals; write Gherkin specs |
+| | `/decompose` | Break a design into a merge tree of dependent tasks |
+| | `/rebalance` | Rebalance the task tree when tasks are too large or too small |
+| **Implementation** | `/code` | Implement a task via TDD |
+| | `/qa` | Generate tests from specs; analyze test coverage |
+| | `/review` | Code review for style and quality |
+| | `/security` | Security audit (OWASP, secrets, CVEs) — has VETO authority |
+| | `/verify` | Run project-specific verification cycles |
+| **Coordination** | `/orchestrator` | Route work between specialist agents |
+| | `/merge-up` | Merge a completed leaf task up to its epic |
+| | `/update-claude` | Update CLAUDE.md with new conventions or feedback |
+| **Visibility** | `/visualize` | Show the task tree with progress and ready work |
+| | `/dashboard` | Open the agent ecosystem dashboard |
+
 ---
 
 ## Requirements
