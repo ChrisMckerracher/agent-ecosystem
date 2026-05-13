@@ -48,7 +48,7 @@ Invoke the Coding Agent.
 
 6. **Claim task:**
    ```bash
-   bd update {task-id} --status in_progress
+   bd update {task-id} --claim
    ```
 
 ### Task Completion

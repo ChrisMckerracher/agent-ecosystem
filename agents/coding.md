@@ -90,7 +90,7 @@ Implement tasks using TDD workflow.
 
 3. **Claim task:**
    ```bash
-   bd update {task-id} --status in_progress
+   bd update {task-id} --claim
    ```
 5. **REQUIRED:** Spawn QA Agent in parallel:
    ```

@@ -114,18 +114,6 @@ Fallback chain: LSP -> AST (ast-grep/semgrep) -> Grep
 | `tests/e2e/` | Playwright e2e tests generated from specs |
 | `tests/e2e/playwright.config.ts` | Playwright config with video recording |
 
-## Task Tracking with Beads
-
-Beads is the invisible task tracking infrastructure. Users see "tasks", not `bd` commands.
-
-```bash
-bd ready              # Find available work
-bd show <id>          # View task details
-bd update <id> --status in_progress  # Claim work
-bd close <id>         # Complete work
-bd sync               # Sync with git
-```
-
 ## Human Validation Gates
 
 Three mandatory approval points where agents pause:
@@ -140,26 +128,6 @@ Three mandatory approval points where agents pause:
 - Never skip mandatory gates
 - Silence is not approval - wait for explicit response
 - Human can always request changes at any gate
-
-## Session Completion Protocol
-
-When ending a work session, complete ALL steps:
-
-1. File issues for remaining work
-2. Run quality gates (if code changed)
-3. Update task status
-4. **PUSH TO REMOTE** (mandatory):
-   ```bash
-   git pull --rebase
-   bd sync
-   git push
-   git status  # Must show "up to date with origin"
-   ```
-5. Clean up stashes, prune branches
-6. Verify all changes committed AND pushed
-7. Hand off context for next session
-
-Work is NOT complete until `git push` succeeds.
 
 ## Common Workflows
 
