@@ -7,7 +7,15 @@ argument-hint: "[--root PATH] [--project-name NAME] [--language python|typescrip
 # /init-harness
 
 Install the universal harness templates into a target repo via the strict
-installer at `${CLAUDE_PLUGIN_ROOT}/scripts/init-harness/install.sh`.
+installer at `{AGENT_ECOSYSTEM_ROOT}/scripts/init-harness/install.sh`.
+
+> **Plugin-root placeholder.** `${CLAUDE_PLUGIN_ROOT}` does not expand in slash
+> command markdown (anthropics/claude-code#9354, still open). The plugin's
+> SessionStart hook (`hooks/session-start.sh`) prints `AGENT_ECOSYSTEM_ROOT="..."`
+> to context at the start of every session. When composing Bash calls below,
+> substitute `{AGENT_ECOSYSTEM_ROOT}` with the value you saw in that hook line.
+> When #9354 lands, swap `{AGENT_ECOSYSTEM_ROOT}` → `${CLAUDE_PLUGIN_ROOT}` and
+> drop the hook injection.
 
 ## What this lays down
 
@@ -38,11 +46,14 @@ exists, it aborts with exit 2 and writes zero files. The user must either:
    - project name (default: directory basename)
    - language preset: `python`, `typescript`, or `polyglot` (default: `polyglot`)
    - whether to do a `--dry-run` first
-2. Run the installer:
+2. Run the installer (substitute `{AGENT_ECOSYSTEM_ROOT}` with the value from
+   the SessionStart hook):
    ```
-   bash ${CLAUDE_PLUGIN_ROOT}/scripts/init-harness/install.sh \
+   bash "{AGENT_ECOSYSTEM_ROOT}/scripts/init-harness/install.sh" \
        --root <root> --project-name <name> --language <lang> [--dry-run] [--force]
    ```
+   Always double-quote the path — `~/.claude/plugins/...` paths may contain
+   spaces.
 3. Surface the installer's stdout verbatim, including the "Next steps" block.
 4. If exit code 2 (conflicts), do NOT silently rerun with `--force`. Show the
    conflict list to the user and ask whether to force-overwrite or to bail.
